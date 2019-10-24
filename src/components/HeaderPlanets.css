@@ -1,0 +1,12 @@
+.PlanetsHeader {
+  display: flex;
+  align-items: stretch;
+  height: 15em;
+  padding-bottom: 50px;
+}
+
+.PlanetsHeader .bigTitle {
+  display: flex;
+  position: absolute;
+  color: white;
+}
