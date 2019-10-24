@@ -1,5 +1,6 @@
 import React from 'react';
 import Planets from './Planets';
+import './Planets.css';
 
 const planets = [
   {
@@ -34,7 +35,7 @@ const planets = [
 ];
 
 const PlanetsList = () => (
-  <div>
+  <div className="planets-container">
     {planets.map(item => (
       <Planets avatar={item.avatar} name={item.name} dimension={item.dimension} type={item.type} />
     ))}

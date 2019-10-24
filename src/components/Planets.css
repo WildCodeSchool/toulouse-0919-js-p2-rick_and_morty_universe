@@ -1,4 +1,8 @@
 @media (max-width: 720px) {
+  /*.planets-container{
+        display: flex;
+    }*/
+
   .Planets {
     display: flex;
     flex-direction: column;
@@ -10,7 +14,8 @@
     top: 0px;
   }
 
-  .Planets .title-background {
+  /*.Planets*/
+  .title-background {
     /*position: absolute;
 width: 86px;
 height: 16px;*/
