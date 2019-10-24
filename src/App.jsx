@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Component1 from './components/Component1';
-import ListsHumans from './components/ListsHumans';
+//import HumanHeader from './components/HumanHeader';
+import HumansList from './components/HumansList';
 
 function App() {
   return (
     <div className="App">
-      <Component1 />
-      <ListsHumans />
+      {/* <HumanHeader /> */}
+      <HumansList />
     </div>
   );
 }
