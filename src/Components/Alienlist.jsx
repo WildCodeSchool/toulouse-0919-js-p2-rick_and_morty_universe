@@ -7,7 +7,9 @@ const alienuser = [
     name: 'Alien Rick',
     id: 15,
     gender: 'Male',
-    species: 'Alien'
+    species: 'Alien',
+    location: 'Earth (Replacement Dimension)',
+    episode: 'https://rickandmortyapi.com/api/episode/10'
   },
 
   {
@@ -15,7 +17,9 @@ const alienuser = [
     name: 'Alien Morty',
     id: 14,
     gender: 'Male',
-    species: 'Alien'
+    species: 'Alien',
+    location: 'Citadel of Ricks',
+    episode: 'https://rickandmortyapi.com/api/episode/10'
   },
 
   {
@@ -23,9 +27,17 @@ const alienuser = [
     name: 'Alien Googah',
     id: 13,
     gender: 'Male',
-    species: 'Alien'
+    species: 'unknown',
+    location: 'Earth (Replacement Dimension)',
+    episode: 'https://rickandmortyapi.com/api/episode/31'
   }
 ];
+
+// const alienLocation = [
+//   {
+//     name:
+//   }
+// ]
 
 function Alienlist(props) {
   return (

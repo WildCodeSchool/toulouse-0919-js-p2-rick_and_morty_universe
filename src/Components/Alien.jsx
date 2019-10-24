@@ -17,20 +17,20 @@ class Alien extends React.Component {
   }
 
   render() {
-    const { image, name, species, gender, id } = this.props.alienInfos;
+    const { image, name, species, gender, id, location, episode } = this.props.alienInfos;
     const menu = this.state.show ? (
       <div>
-        <button>{species}</button>
-        <button>{gender}</button>
+        <p>{species}</p>
+        <p>{gender}</p>
+        <p>{location}</p>
+        <p>{episode}</p>
       </div>
     ) : null;
     return (
       <div className="alien">
-        <img className="image" src={image} alt={name} />
-        <div>
-          <button className="name" onClick={this.displayHandler}>
-            {name}
-          </button>
+        <img className="avatar" src={image} alt={name} />
+        <div className="name">
+          <h1 onClick={this.displayHandler}>{name}</h1>
         </div>
         {menu}
         <h1>{id}</h1>
