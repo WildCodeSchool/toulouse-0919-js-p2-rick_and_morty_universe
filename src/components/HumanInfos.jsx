@@ -1,5 +1,6 @@
 import React from 'react';
 
+/** (sans destructuration) */
 function HumanInfos({ humanInfos }) {
   return (
     <div className="HumanInfos">
@@ -15,7 +16,7 @@ function HumanInfos({ humanInfos }) {
   );
 }
 
-/** (Ref destructuration)
+/** (Ref destructuration) 
 function HumanInfos({ humanInfos }) {
   const {name, type, gender, origin, location} = humanInfos;
   return (
