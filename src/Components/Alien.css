@@ -1,0 +1,21 @@
+@media (max-width: 720px) {
+  .image {
+    border-radius: 15%;
+    height: auto;
+    padding: auto;
+    margin-top: 1em;
+    margin-right: 5em;
+  }
+
+  .alien {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 50%;
+  }
+
+  .name {
+    width: 100%;
+    height: auto;
+  }
+}
