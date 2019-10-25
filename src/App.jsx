@@ -10,12 +10,12 @@ import PlanetsList from './components/PlanetsList';
 function App() {
   return (
     // eslint-disable-next-line react/jsx-filename-extension
-    <div className="App">
-      <HumanHeader />
-      <HumansList />
+    <div className="App">  
       <HeaderPlanets />
       <PlanetsList />
       <Alienlist />
+      <HumanHeader />
+      <HumansList />
     </div>
   );
 }

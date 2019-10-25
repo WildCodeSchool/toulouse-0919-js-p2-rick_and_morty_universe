@@ -29,9 +29,9 @@ class Planets extends React.Component {
         <img src={this.props.avatar} className="avatar" alt="avatar" />
         <div className="description">
           <div className="title-background">
-            <h2 className="name" onClick={this.displayHandler}>
+            <h3 className="name" onClick={this.displayHandler}>
               {this.props.name}
-            </h2>
+            </h3>
           </div>
           {menu}
         </div>

@@ -3,21 +3,38 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 50%;
+    /* font-size: 50%; */
   }
 
-  .avatar {
-    border-radius: 15%;
+    .avatar {
+  /*border-radius: 15%;
     height: auto;
     padding: auto;
     margin-top: 1em;
     margin-right: 5em;
+  }*/
+  width: 269px;
+    height: 175px;
+    left: 26px;
+    top: 57px;
+    border-radius: 13px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .name {
-    width: 140px;
+    /*width: 140px;
     height: 20px;
     background-color: #5cc95a;
     border-radius: 20%;
-  }
+  }*/
+    left: 47px;
+    top: 154px;
+    background: #5cc95a;
+    border-radius: 20px;
+    margin-left: 26%;
+    margin-right: 26%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
 }

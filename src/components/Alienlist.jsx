@@ -1,6 +1,6 @@
 import React from 'react';
 import Alien from './Alien.jsx';
-
+import './Alienlist.css'
 const alienuser = [
   {
     image: 'https://rickandmortyapi.com/api/character/avatar/15.jpeg',

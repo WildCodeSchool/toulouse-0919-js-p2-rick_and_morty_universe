@@ -24,16 +24,16 @@ class Alien extends React.Component {
         <p>{gender}</p>
         <p>{location}</p>
         <p>{episode}</p>
+        <p>{id}</p>
       </div>
     ) : null;
     return (
       <div className="alien">
         <img className="avatar" src={image} alt={name} />
         <div className="name">
-          <h1 onClick={this.displayHandler}>{name}</h1>
+          <h3 onClick={this.displayHandler}>{name}</h3>
         </div>
         {menu}
-        <h1>{id}</h1>
       </div>
     );
   }
