@@ -1,3 +1,7 @@
+.accueil {
+  display: flex;
+}
+
 .logo-img {
   position: absolute;
   width: 40px;
@@ -24,7 +28,7 @@
   position: absolute;
   width: 153px;
   height: 41px;
-  left: 10px;
+  left: 100px;
   top: 30px;
 
   font-family: 'Freckle Face';
