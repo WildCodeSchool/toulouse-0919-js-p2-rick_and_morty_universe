@@ -1,7 +1,8 @@
+<<<<<<< HEAD
 /* eslint-disable import/no-unresolved */
 import React from 'react';
 import HeaderPlanets from './components/HeaderPlanets';
-//import Planets from './components/Planets';
+import Alienlist from './Components/Alienlist.jsx';
 import PlanetsList from './components/PlanetsList';
 import './App.css';
 
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <HeaderPlanets />
       <PlanetsList />
+      <Alienlist />
     </div>
   );
 }
