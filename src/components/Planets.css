@@ -7,11 +7,12 @@
     display: flex;
     flex-direction: column;
   }
-  .headerImage {
+  img {
     width: 100%;
     height: 17em;
     left: 0px;
     top: 0px;
+    overflow: hidden;
   }
 
   /*.Planets*/
