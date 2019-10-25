@@ -41,7 +41,7 @@ const alienuser = [
 
 function Alienlist(props) {
   return (
-    <ul className="bloc">
+    <ul>
       {alienuser.map(item => (
         <Alien alienInfos={item} />
       ))}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Alien.css';
+import './HeaderAlien.jsx';
 
 class Alien extends React.Component {
   constructor(props) {
