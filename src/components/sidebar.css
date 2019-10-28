@@ -1,7 +1,22 @@
+.sidebar {
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.burger {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+}
+
 /* Individual item */
 .bm-item {
-  display: inline-block;
-
   /* Our sidebar item styling */
   text-decoration: none;
   margin-bottom: 10px;
@@ -13,21 +28,18 @@
 .bm-item:hover {
   color: white;
 }
-
-/* The rest copied directly from react-burger-menu docs */
-
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
   width: 36px;
   height: 30px;
-  left: 36px;
+  right: 36px;
   top: 36px;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: #fff;
 }
 
 /* Position and sizing of clickable cross button */
