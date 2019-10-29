@@ -9,8 +9,8 @@ function HumanInfos({ humanInfos }) {
         <li> name :{humanInfos.name} </li>
         <li> type : {humanInfos.type} </li>
         <li> gender : {humanInfos.gender} </li>
-        <li> origin : {humanInfos.origin} </li>
-        <li> location : {humanInfos.location} </li>
+        <li> origin : {humanInfos.origin.name} </li>
+        <li> location : {humanInfos.location.name} </li>
       </ul>
     </div>
   );

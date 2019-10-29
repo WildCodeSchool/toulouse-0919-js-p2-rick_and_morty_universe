@@ -6,63 +6,75 @@ class HumansList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      humans: [
-        {
-          id: 1,
-          name: 'Agency Director',
-          type: '',
-          gender: 'Male',
-          origin: 'Earth (Replacement Dimension)',
-          location: 'Earth (Replacement Dimension)',
-          image: 'https://rickandmortyapi.com/api/character/avatar/9.jpeg'
-        },
-
-        {
-          id: 2,
-          name: 'Jerry Smith',
-          type: '',
-          gender: 'Male',
-          origin: 'Earth (Replacement Dimension)',
-          location: 'Testicle Monster Dimension',
-          image: 'https://rickandmortyapi.com/api/character/avatar/7.jpeg'
-        },
-
-        {
-          id: 3,
-          name: 'Alan Rails',
-          type: 'Superhuman (Ghost trains summoner)',
-          gender: 'Male',
-          origin: 'Earth (Replacement Dimension)',
-          location: 'Worldender',
-          image: 'https://rickandmortyapi.com/api/character/avatar/10.jpeg'
-        }
-      ]
+      page: 1,
+      humans: [],
+      filterAlive: false,
     };
-    // this.getRickAndMorty = this.getRickAndMorty.bind(this);
+    this.handleAliveChange = this.handleAliveChange.bind(this);
+    this.handleNextPage = this.handleNextPage.bind(this);
+    this.getRickAndMorty = this.getRickAndMorty.bind(this);
   }
 
-  // getRickAndMorty() {
-  //   // Send the request
-  //   axios
-  //     .get('https://rickandmortyapi.com/api/character/')
-  //     // Extract the DATA from the received response
-  //     .then(response => response.data)
-  //     // Use this data to update the state
-  //     .then(data => {
-  //       this.setState({
-  //         human: data.results[0]
-  //       });
-  //     });
-  // }
+  componentDidMount(){
+    this.getRickAndMorty()
+  }
+
+  componentDidUpdate(){
+    this.getRickAndMorty()
+  }
+  
+  handleNextPage() {
+    const nextPage = this.state.page+1
+    this.setState({
+      page: nextPage,
+    })
+  }
+
+  handleAliveChange(event) {
+    this.setState({
+      filterAlive: !this.state.filterAlive
+    })
+  }
+
+   getRickAndMorty() {
+    // Send the request
+    axios
+      .get('https://rickandmortyapi.com/api/character/', {
+        params: {
+          page: this.state.page,
+        }
+      })
+      // Extract the DATA from the received response
+      .then(response => response.data)
+      // Use this data to update the state
+      .then(data => {
+        this.setState({
+          humans: data.results
+        });
+      });
+  }
 
   render() {
-    const listOfHumans = this.state.humans.map(human => {
+    let filteredListOfHumans = this.state.humans
+    .filter(character => {
+      return (character.species=== "Human")
+    })
+
+    if(this.state.filterAlive) {
+      filteredListOfHumans = filteredListOfHumans.filter(human => human.status!=="Alive")
+    }
+
+    const listOfHumans = filteredListOfHumans.map(human => {
       return <HumanInfos humanInfos={human} />;
     });
+
+
     return (
       <div>
+        <button onClick={this.handleNextPage}></button>
+        <span>{this.state.page}</span>
+        <input type="checkbox" name="alive" value="alive" onChange={this.handleAliveChange}/>
         {listOfHumans}
-        <button type="button" onClick={this.state} />
       </div>
     );
   }
