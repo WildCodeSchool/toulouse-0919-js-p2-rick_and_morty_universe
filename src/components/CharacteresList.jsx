@@ -1,13 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import HumanInfos from './HumanInfos';
+import CharacteresInfos from './CharacteresInfos';
 
-class HumansList extends React.Component {
+class CharacteresList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       page: 1,
-      humans: [],
+      listOfCharacters: [],
       filterAlive: false,
       filterDead: false,
       filterMale: false,
@@ -71,9 +71,6 @@ handleFemaleChange(event) {
     // Send the request
     axios
       .get('https://rickandmortyapi.com/api/character/',
-      
-      
-      
       {
         params: {
           page: this.state.page,
@@ -84,35 +81,35 @@ handleFemaleChange(event) {
       // Use this data to update the state
       .then(data => {
         this.setState({
-          humans: data.results
+          listOfCharacters: data.results
         });
       });
   }
 
   render() {
-    let filteredListOfHumans = this.state.humans
+    let filteredListOfCharacteres = this.state.listOfCharacters
     .filter(character => {
       return (character)
     })
 
     if(this.state.filterAlive) {
-      filteredListOfHumans = filteredListOfHumans.filter(human => human.status ==="Alive")
+      filteredListOfCharacteres = filteredListOfCharacteres.filter(listOfCharacters => listOfCharacters.status ==="Alive")
     }
 
     if(this.state.filterDead) {
-      filteredListOfHumans = filteredListOfHumans.filter(human => human.status === "Dead")
+      filteredListOfCharacteres = filteredListOfCharacteres.filter(listOfCharacters => listOfCharacters.status === "Dead")
     }
 
     if (this.state.filterMale) {
-      filteredListOfHumans = filteredListOfHumans.filter(human => human.gender === "Male")
+      filteredListOfCharacteres = filteredListOfCharacteres.filter(listOfCharacters => listOfCharacters.gender === "Male")
     }
 
     if (this.state.filterFemale) {
-      filteredListOfHumans = filteredListOfHumans.filter(human => human.gender === "Female")
+      filteredListOfCharacteres = filteredListOfCharacteres.filter(listOfCharacters => listOfCharacters.gender === "Female")
     }
 
-    const listOfHumans = filteredListOfHumans.map(human => {
-      return <HumanInfos humanInfos={human} />;
+    const listOfCharacters = filteredListOfCharacteres.map(listOfCharacters => {
+      return <CharacteresInfos characteresInfos={listOfCharacters} />;
     });
 
 
@@ -126,10 +123,10 @@ handleFemaleChange(event) {
         <input type="checkbox" name="male" value="male" onChange={this.handleMaleChange}/>Male<br/>
         <input type="checkbox" name="female" value="female" onChange={this.handleFemaleChange}/>Female<br/>
 
-        {listOfHumans}
+        {listOfCharacters}
       </div>
     );
   }
 }
 
-export default HumansList;
+export default CharacteresList;
