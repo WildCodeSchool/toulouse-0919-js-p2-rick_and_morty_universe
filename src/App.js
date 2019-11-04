@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
 import HumanHeader from './components/HumanHeader';
-import HumansList from './components/HumansList';
+import CharacteresList from './components/CharacteresList';
 /* eslint-disable import/no-unresolved */
 import HeaderPlanets from './components/HeaderPlanets';
 import Alienlist from './components/Alienlist.jsx';
 import PlanetsList from './components/PlanetsList';
 import {Link, Switch, Route} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
       </Route>     
       <Route path= "/humans">
         <HumanHeader />
-        <HumansList />
+        <CharacteresList />
       </Route>
     </Switch>
     </div>

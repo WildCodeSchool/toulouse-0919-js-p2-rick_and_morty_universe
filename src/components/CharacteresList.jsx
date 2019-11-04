@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import CharacteresInfos from './CharacteresInfos';
 
+
 class CharacteresList extends React.Component {
   constructor(props) {
     super(props);
@@ -124,7 +125,10 @@ handleFemaleChange(event) {
         <input type="checkbox" name="female" value="female" onChange={this.handleFemaleChange}/>Female<br/>
 
         {listOfCharacters}
+        
       </div>
+
+
     );
   }
 }
