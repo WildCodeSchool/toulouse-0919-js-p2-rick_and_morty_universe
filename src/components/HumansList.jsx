@@ -9,9 +9,16 @@ class HumansList extends React.Component {
       page: 1,
       humans: [],
       filterAlive: false,
+      filterDead: false,
+      filterMale: false,
+      filterFemale: false,
     };
     this.handleAliveChange = this.handleAliveChange.bind(this);
+    this.handleDeadChange = this.handleDeadChange.bind(this);
+    this.handleMaleChange = this.handleMaleChange.bind(this);
+    this.handleFemaleChange = this.handleFemaleChange.bind(this);
     this.handleNextPage = this.handleNextPage.bind(this);
+    this.handlePreviousPage = this.handlePreviousPage.bind(this);
     this.getRickAndMorty = this.getRickAndMorty.bind(this);
   }
 
@@ -30,16 +37,44 @@ class HumansList extends React.Component {
     })
   }
 
+  handlePreviousPage() {
+    const previousPage = this.state.page-1
+    this.setState({
+      page: previousPage,
+    })
+  }
+
   handleAliveChange(event) {
     this.setState({
       filterAlive: !this.state.filterAlive
     })
   }
 
+  handleDeadChange(event) {
+    this.setState({
+      filterDead: !this.state.filterDead
+    })
+  }
+
+  handleMaleChange(event) {
+    this.setState({
+      filterMale: !this.state.filterMale
+    })
+  }
+
+handleFemaleChange(event) {
+  this.setState({
+    filterFemale: !this.state.filterFemale
+  })
+}
    getRickAndMorty() {
     // Send the request
     axios
-      .get('https://rickandmortyapi.com/api/character/', {
+      .get('https://rickandmortyapi.com/api/character/',
+      
+      
+      
+      {
         params: {
           page: this.state.page,
         }
@@ -57,11 +92,23 @@ class HumansList extends React.Component {
   render() {
     let filteredListOfHumans = this.state.humans
     .filter(character => {
-      return (character.species=== "Human")
+      return (character)
     })
 
     if(this.state.filterAlive) {
-      filteredListOfHumans = filteredListOfHumans.filter(human => human.status!=="Alive")
+      filteredListOfHumans = filteredListOfHumans.filter(human => human.status ==="Alive")
+    }
+
+    if(this.state.filterDead) {
+      filteredListOfHumans = filteredListOfHumans.filter(human => human.status === "Dead")
+    }
+
+    if (this.state.filterMale) {
+      filteredListOfHumans = filteredListOfHumans.filter(human => human.gender === "Male")
+    }
+
+    if (this.state.filterFemale) {
+      filteredListOfHumans = filteredListOfHumans.filter(human => human.gender === "Female")
     }
 
     const listOfHumans = filteredListOfHumans.map(human => {
@@ -71,9 +118,14 @@ class HumansList extends React.Component {
 
     return (
       <div>
-        <button onClick={this.handleNextPage}></button>
+        <button onClick={this.handlePreviousPage}>Previous</button>
+        <button onClick={this.handleNextPage}>Next</button>
         <span>{this.state.page}</span>
-        <input type="checkbox" name="alive" value="alive" onChange={this.handleAliveChange}/>
+        <input type="checkbox" name="alive" value="alive" onChange={this.handleAliveChange}/>Alive<br/>
+        <input type="checkbox" name="dead" value="dead" onChange={this.handleDeadChange}/>Dead<br/>
+        <input type="checkbox" name="male" value="male" onChange={this.handleMaleChange}/>Male<br/>
+        <input type="checkbox" name="female" value="female" onChange={this.handleFemaleChange}/>Female<br/>
+
         {listOfHumans}
       </div>
     );
