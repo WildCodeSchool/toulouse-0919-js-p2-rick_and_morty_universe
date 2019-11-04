@@ -71,9 +71,6 @@ handleFemaleChange(event) {
     // Send the request
     axios
       .get('https://rickandmortyapi.com/api/character/',
-      
-      
-      
       {
         params: {
           page: this.state.page,
