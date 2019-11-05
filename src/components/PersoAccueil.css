@@ -1,34 +1,6 @@
-.beth-img {
+.perso-accueil img {
   border-radius: 50%;
-}
-.jerry-img {
-  border-radius: 50%;
-}
-.mr_poopybutthole-img {
-  border-radius: 50%;
-}
-.meeseeks-img {
-  border-radius: 50%;
-}
-
-.morty-img {
-  border-radius: 50%;
-}
-.pickle_rick-img {
-  border-radius: 50%;
-}
-.rick-img {
-  border-radius: 50%;
-}
-.scary_terry-img {
-  border-radius: 50%;
-}
-.scquanchy-img {
-  border-radius: 50%;
-}
-.snowball-img {
-  border-radius: 50%;
-}
-.summer-img {
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }

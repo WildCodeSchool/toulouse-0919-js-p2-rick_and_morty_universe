@@ -1,6 +1,6 @@
-import react, { useState } from 'react';
+import React, { useState } from 'react';
 
-function SearchFrom(props) {
+function SearchForm(props) {
   const { onSearch } = props;
 
   return (
@@ -11,4 +11,4 @@ function SearchFrom(props) {
   );
 }
 
-export default SearchFrom;
+export default SearchForm;

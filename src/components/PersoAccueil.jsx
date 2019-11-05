@@ -14,7 +14,7 @@ import summerimg from '../img-perso-accueil/summer1.jpg';
 
 function PersoAccueil() {
   return (
-    <div className="perso-accueil" id="perso-accueil">
+    <div className="" id="perso-accueil">
       <div className="beth perso-accueil">
         <img src={bethimg} alt="beth logo" className="beth-img" />
       </div>
@@ -55,7 +55,7 @@ function PersoAccueil() {
         <img src={scquanchyimg} alt="scquanchy logo" className="scquanchy-img" />
       </div>
 
-      <div className="snowball">
+      <div className="snowball perso-accueil">
         <img src={snowballimg} alt="snowball logo" className="snowball-img" />
       </div>
 

@@ -1,13 +1,9 @@
 import React from 'react';
 import logo1 from '../imageaccueil/logo1.png';
-import './sidebar.css';
+import './SideBar.css';
 import { slide as Menu } from 'react-burger-menu';
 
 const SideBar = props => {
-  //const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  //const toggle = () => setDropdownOpen(prevState => !prevState);
-
   return (
     <div className="sidebar">
       <img src={logo1} alt="logo accueil" className="logo-img" />
