@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import CharacteresInfos from './CharacteresInfos';
-import './CharacteresList.css'
+import './CharacteresList.css';
+import InfiniteScroll from 'react-infinite-scroller';
 
 class CharacteresList extends React.Component {
   constructor(props) {
@@ -34,28 +35,29 @@ class CharacteresList extends React.Component {
     this.handleRobotsChange = this.handleRobotsChange.bind(this);
     this.handleCronenbergChange = this.handleCronenbergChange.bind(this);
     this.handlePoopybuttholeChange = this.handlePoopybuttholeChange.bind(this);
-    this.handleNextPage = this.handleNextPage.bind(this);
+    // this.handleNextPage = this.handleNextPage.bind(this);
     this.handlePreviousPage = this.handlePreviousPage.bind(this);
-    this.getRickAndMorty = this.getRickAndMorty.bind(this);
+    //this.getRickAndMorty = this.getRickAndMorty.bind(this);
+    this.getCharactersByPage = this.getCharactersByPage.bind(this);
     
     
     
   }
 
   componentDidMount(){
-    this.getRickAndMorty()
+    this.getCharactersByPage(1)
   }
 
-  componentDidUpdate(){
-    this.getRickAndMorty()
-  }
+  // componentDidUpdate(){
+  //   this.getRickAndMorty()
+  // }
   
-  handleNextPage() {
-    const nextPage = this.state.page+1
-    this.setState({
-      page: nextPage,
-    })
-  }
+  // handleNextPage() {
+  //   const nextPage = this.state.page+1
+  //   this.setState({
+  //     page: nextPage,
+  //   })
+  // }
 
   handlePreviousPage() {
     const previousPage = this.state.page-1
@@ -135,26 +137,32 @@ handlePoopybuttholeChange(event) {
     filterPoopybutthole: !this.state.filterPoopybutthole
   })
 }
-   getRickAndMorty() {
-    // Send the request
+  
+  getCharactersByPage(page) {
     axios
       .get('https://rickandmortyapi.com/api/character/',
       {
         params: {
-          page: this.state.page,
+          page
         }
-      })
-      // Extract the DATA from the received response
-      .then(response => response.data)
-      // Use this data to update the state
+      })  
+      .then(response => response.data)  
       .then(data => {
-        this.setState({
-          listOfCharacters: data.results
+        this.setState((prevState) => {
+          const newListOfCharacters = [...prevState.listOfCharacters, ... data.results]
+          return {
+            listOfCharacters : newListOfCharacters
+          }
         });
       });
   }
-
   render() {
+    const {listOfCharacters}= this.state;
+    const filterByCategory =(property,value) => {
+     return listOfCharacters.filter((character)=>{
+        return(character[property] === value)
+      })
+    }
     let filteredListOfCharacteres = this.state.listOfCharacters
     .filter(character => {
       return (character)
@@ -207,7 +215,7 @@ handlePoopybuttholeChange(event) {
       filteredListOfCharacteres = filteredListOfCharacteres.filter(listOfCharacters => listOfCharacters.species === "Poopybutthole")
     }
 
-    const listOfCharacters = filteredListOfCharacteres.map(listOfCharacters => {
+    const characters = filteredListOfCharacteres.map(listOfCharacters => {
       return <CharacteresInfos characteresInfos={listOfCharacters} />;
     });
 
@@ -248,10 +256,20 @@ handlePoopybuttholeChange(event) {
           
         </div>
         </div>
-        <button onClick={this.handlePreviousPage}>Previous</button>
+        {/* <button onClick={this.handlePreviousPage}>Previous</button>
         <button onClick={this.handleNextPage}>Next</button>
-        <span>{this.state.page}</span>
-        {listOfCharacters}
+        <span>{this.state.page}</span> */}
+
+        <InfiniteScroll
+    pageStart={1}
+    loadMore={this.getCharactersByPage}
+    hasMore={true || false}
+    loader={<div className="loader" key={0}>Loading ...</div>}
+>
+    {characters}
+</InfiniteScroll>
+
+        
         
       </div>
 
