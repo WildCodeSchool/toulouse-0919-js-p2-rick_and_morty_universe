@@ -1,24 +1,32 @@
-import React from './react';
+import React, { Component } from 'react';
 
+class PageOfCharacter extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        }
+    };
 
-function PageOfCharacter() {
-    return (
-        <div>
+    render() {
+        const { image, name, status, species, gender } = this.state.character;
+        return (
             <div>
                 <div>
-                    <img src={this.state.character.image} alt={this.state.character.name} />
+                    <div>
+                        <img src={image} alt={name} />
+                    </div>
+                    <h1>{name}</h1>
                 </div>
-                {this.state.character && <h1>{this.state.character.name}</h1>}
+                <div>
+                    <ul>
+                        <li>{status}</li>
+                        <li>{species}</li>
+                        <li>{gender}</li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <ul>
-                    <li>{this.state.character.status}</li>
-                    <li>{this.state.character.species}</li>
-                    <li>{this.state.character.gender}</li>
-                </ul>
-            </div>
-        </div>
-    )
+        )
+    }
 };
 
 export default PageOfCharacter;
