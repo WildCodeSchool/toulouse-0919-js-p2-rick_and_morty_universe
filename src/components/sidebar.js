@@ -8,20 +8,14 @@ const SideBar = props => {
     <div className="sidebar">
       <img src={logo1} alt="logo accueil" className="logo-img" />
       <Menu reveal right isOpen={false}>
-        <a id="planets" className="menu-item" href="/planetes">
-          Planets
-        </a>
-        <a id="humans" className="menu-item" href="/humans">
-          Humans
-        </a>
-        <a id="alien" className="menu-item" href="/alien">
-          Aliens
+        <a id="characters" className="menu-item" href="/characters">
+          Characters
         </a>
         <a id="viedos" className="menu-item" href="/videos">
           Videos
         </a>
-        <a id="contact" className="menu-item" href="/contact">
-          Contact
+        <a id="about" className="menu-item" href="/about">
+          About
         </a>
         <a id="sources" className="menu-item" href="/sources">
           Sources

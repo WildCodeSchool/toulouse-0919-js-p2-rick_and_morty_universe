@@ -29,58 +29,58 @@
 .beth {
   position: absolute;
   left: 10%;
-  top: 340px;
+  top: 850px;
 }
 
 .jerry {
   position: absolute;
-  right: 25%;
-  top: 400px;
+  right: 10%;
+  top: 500px;
 }
 
 .mr_poopybutthole {
   position: absolute;
-  right: 15%;
-  top: 430px;
+  right: 25%;
+  top: 850px;
 }
 
 .meeseeks {
   position: absolute;
-  left: 5%;
-  top: 460px;
+  right: 25%;
+  top: 600px;
 }
 .morty {
   position: absolute;
-  left: 45%;
-  top: 370px;
+  left: 30%;
+  top: 800px;
 }
 .pickle_rick {
   position: absolute;
-  right: 40%;
-  top: 530px;
+  right: 10%;
+  top: 200px;
 }
 .rick {
   position: absolute;
-  right: 35%;
-  top: 550px;
+  right: 30%;
+  top: 350px;
 }
 .scary_terry {
   position: absolute;
-  right: 25%;
-  top: 345px;
+  left: 15%;
+  top: 500px;
 }
 .scquanchy {
   position: absolute;
-  left: 25%;
-  top: 500px;
+  left: 10%;
+  top: 200px;
 }
 .snowball {
   position: absolute;
-  right: 10%;
-  top: 570px;
+  right: 9%;
+  top: 850px;
 }
 .summer {
   position: absolute;
-  right: 5%;
-  top: 600px;
+  left: 30%;
+  top: 300px;
 }
