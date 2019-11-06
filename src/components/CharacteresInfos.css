@@ -1,0 +1,11 @@
+.characteresInfos {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.blocInformations {
+    list-style-type: none;
+}

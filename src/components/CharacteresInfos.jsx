@@ -1,11 +1,11 @@
 import React from 'react';
-
+import './CharacteresInfos.css'
 /** (sans destructuration) */
 function CharacteresInfos({ characteresInfos }) {
   return (
     <div className="characteresInfos">
       <img src={characteresInfos.image} alt={characteresInfos.character} />
-      <ul className="bloc">
+      <ul className="blocInformations">
         <li> name :{characteresInfos.name} </li>
         <li> type : {characteresInfos.type} </li>
         <li> gender : {characteresInfos.gender} </li>

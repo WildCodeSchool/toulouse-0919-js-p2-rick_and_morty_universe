@@ -3,6 +3,7 @@ import axios from 'axios';
 import CharacteresInfos from './CharacteresInfos';
 import './CharacteresList.css';
 import InfiniteScroll from 'react-infinite-scroller';
+import CharactersListHeader from './CharactersListHeader';
 
 class CharacteresList extends React.Component {
   constructor(props) {
@@ -149,7 +150,7 @@ handlePoopybuttholeChange(event) {
       .then(response => response.data)  
       .then(data => {
         this.setState((prevState) => {
-          const newListOfCharacters = [...prevState.listOfCharacters, ... data.results]
+          const newListOfCharacters = [...prevState.listOfCharacters, ...data.results]
           return {
             listOfCharacters : newListOfCharacters
           }
@@ -223,7 +224,7 @@ handlePoopybuttholeChange(event) {
     return (
       <div>
         
-        
+        <div class="dropdownContainer">
 
         <div class="dropdown">
           <button class="dropbtn">Gender</button>
@@ -232,15 +233,7 @@ handlePoopybuttholeChange(event) {
         <input type="checkbox" name="male" value="male" onChange={this.handleMaleChange}/>Male<br/>
         </div>
         </div>
-        
-        <div class="dropdown">
-          <button class="dropbtn">Status</button>
-        <div class="dropdown-content">
-          <input type="checkbox" name="alive" value="alive" onChange={this.handleAliveChange}/>Alive<br/>
-          <input type="checkbox" name="dead" value="dead" onChange={this.handleDeadChange}/>Dead<br/>
-        </div>
-        </div>
-
+      
         <div class="dropdown">
           <button class="dropbtn">Species</button>
         <div class="dropdown-content">
@@ -251,11 +244,21 @@ handlePoopybuttholeChange(event) {
           <input type="checkbox" name="humanoids" value="humanoids" onChange={this.handleHumanoidsChange}/>Humanoids<br/>
           <input type="checkbox" name="mythologs" value="mythologs" onChange={this.handleMythologChange}/>Mytholog<br/>
           <input type="checkbox" name="poopybutthole" value="poopybutthole" onChange={this.handlePoopybuttholeChange}/>Poopybutthole<br/>
-          <input type="checkbox" name="robots" value="robots" onChange={this.handleRobotsChange}/>Robots<br/>
+          {/* <input type="checkbox" name="robots" value="robots" onChange={this.handleRobotsChange}/>Robots<br/> */}
           
           
         </div>
         </div>
+        
+        <div class="dropdown">
+          <button class="dropbtn">Status</button>
+        <div class="dropdown-content">
+          <input type="checkbox" name="alive" value="alive" onChange={this.handleAliveChange}/>Alive<br/>
+          <input type="checkbox" name="dead" value="dead" onChange={this.handleDeadChange}/>Dead<br/>
+        </div>
+        </div>
+        </div>
+        
         {/* <button onClick={this.handlePreviousPage}>Previous</button>
         <button onClick={this.handleNextPage}>Next</button>
         <span>{this.state.page}</span> */}
