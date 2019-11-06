@@ -5,7 +5,7 @@ import './App.css';
 import AccueilPage from './components/AccueilPage';
 import PersoAccueil from './components/PersoAccueil';
 import SideBar from './components/sidebar';
-import Header from './components/Header.js';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
 
           <AccueilPage />
           <PersoAccueil />
+          <Footer />
         </div>
       </div>
     </BrowserRouter>

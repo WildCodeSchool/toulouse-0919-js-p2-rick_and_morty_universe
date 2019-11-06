@@ -2,25 +2,29 @@ import React from 'react';
 import logo1 from '../imageaccueil/logo1.png';
 import './sidebar.css';
 import { slide as Menu } from 'react-burger-menu';
+import { Link } from 'react-router-dom';
 
 const SideBar = props => {
   return (
     <div className="sidebar">
-      <img src={logo1} alt="logo accueil" className="logo-img" />
-      <Menu reveal right isOpen={false}>
-        <a id="characters" className="menu-item" href="/characters">
-          Characters
-        </a>
-        <a id="viedos" className="menu-item" href="/videos">
-          Videos
-        </a>
-        <a id="about" className="menu-item" href="/about">
-          About
-        </a>
-        <a id="sources" className="menu-item" href="/sources">
-          Sources
-        </a>
-      </Menu>
+      <Link to="/">
+        <div className="title-logo">
+          <img src={logo1} alt="logo accueil" className="logo-img" />
+        </div>
+      </Link>
+      <div className="menu-burger">
+        <Menu reveal right isOpen={false}>
+          <p>
+            <Link to="/characters">Characters</Link>
+          </p>
+          <p>
+            <Link to="/about">About</Link>
+          </p>
+          <p>
+            <Link to="/sources">Sources</Link>
+          </p>
+        </Menu>
+      </div>
     </div>
   );
 };
