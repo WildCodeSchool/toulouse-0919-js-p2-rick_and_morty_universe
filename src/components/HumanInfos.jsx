@@ -1,23 +1,26 @@
 import React from 'react';
-// import Page from './characterepage';
+// import Page from './Characterepage';
+import { Link } from 'react-router-dom';
 
 // /** (sans destructuration) */
 function HumanInfos({ humanInfos }) {
   return (
-    <div className="HumanInfos" >
-      <img src={humanInfos.image} alt={humanInfos.character} />
-      <ul className="bloc">
-        <li> name :{humanInfos.name} </li>
-        <li> type : {humanInfos.type} </li>
-        <li> gender : {humanInfos.gender} </li>
-        <li> origin : {humanInfos.origin.name} </li>
-        <li> location : {humanInfos.location.name} </li>
-      </ul>
-    </div>
+    <Link to={`page/${humanInfos.id}`}>
+      <div className="HumanInfos" >
+        <img src={humanInfos.image} alt={humanInfos.character} />
+        <ul className="bloc">
+          <li> name :{humanInfos.name} </li>
+          <li> type : {humanInfos.type} </li>
+          <li> gender : {humanInfos.gender} </li>
+          <li> origin : {humanInfos.origin.name} </li>
+          <li> location : {humanInfos.location.name} </li>
+        </ul>
+      </div>
+    </ Link>
   );
 }
 
-// Passage en class
+// Test passage en class
 
 // class HumanInfos extends React.Component {
 //   constructor(props) {

@@ -26,9 +26,9 @@ class HumansList extends React.Component {
     this.getRickAndMorty()
   }
 
-  componentDidUpdate(){
-    this.getRickAndMorty()
-  }
+  // componentDidUpdate(){
+  //   this.getRickAndMorty()
+  // }
   
   handleNextPage() {
     const nextPage = this.state.page+1
