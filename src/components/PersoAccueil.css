@@ -1,6 +1,86 @@
+#perso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .perso-accueil img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+
+.perso-accueil {
+  display: inline-block;
+
+  z-index: 2;
+}
+
+.portal-img {
+  width: 100%;
+}
+
+.portal {
+  z-index: 1;
+  position: relative;
+}
+
+.beth {
+  position: absolute;
+  left: 10%;
+  top: 340px;
+}
+
+.jerry {
+  position: absolute;
+  right: 25%;
+  top: 400px;
+}
+
+.mr_poopybutthole {
+  position: absolute;
+  right: 15%;
+  top: 430px;
+}
+
+.meeseeks {
+  position: absolute;
+  left: 5%;
+  top: 460px;
+}
+.morty {
+  position: absolute;
+  left: 45%;
+  top: 370px;
+}
+.pickle_rick {
+  position: absolute;
+  right: 40%;
+  top: 530px;
+}
+.rick {
+  position: absolute;
+  right: 35%;
+  top: 550px;
+}
+.scary_terry {
+  position: absolute;
+  right: 25%;
+  top: 345px;
+}
+.scquanchy {
+  position: absolute;
+  left: 25%;
+  top: 500px;
+}
+.snowball {
+  position: absolute;
+  right: 10%;
+  top: 570px;
+}
+.summer {
+  position: absolute;
+  right: 5%;
+  top: 600px;
 }

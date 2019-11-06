@@ -12,9 +12,15 @@ import scquanchyimg from '../img-perso-accueil/scquanchy1.jpg';
 import snowballimg from '../img-perso-accueil/snowball1.jpg';
 import summerimg from '../img-perso-accueil/summer1.jpg';
 
+import portalimg from '../imageaccueil/portalimg.png';
+
 function PersoAccueil() {
   return (
-    <div className="" id="perso-accueil">
+    <div className="" id="perso">
+      <div className="portal">
+        <img src={portalimg} alt="portal logo" className="portal-img" />
+      </div>
+
       <div className="beth perso-accueil">
         <img src={bethimg} alt="beth logo" className="beth-img" />
       </div>

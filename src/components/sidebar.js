@@ -1,6 +1,6 @@
 import React from 'react';
 import logo1 from '../imageaccueil/logo1.png';
-import './SideBar.css';
+import './sidebar.css';
 import { slide as Menu } from 'react-burger-menu';
 
 const SideBar = props => {

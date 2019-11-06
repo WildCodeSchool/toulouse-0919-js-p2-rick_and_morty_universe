@@ -1,15 +1,15 @@
 .accueil {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
 .top-logo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .title-img {
@@ -18,9 +18,6 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-}
-.portal-img {
-  width: 100%;
 }
 
 .title-accueil {
