@@ -1,6 +1,6 @@
 import React from 'react';
 // import react router
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import AccueilPage from './components/AccueilPage';
 import PersoAccueil from './components/PersoAccueil';
