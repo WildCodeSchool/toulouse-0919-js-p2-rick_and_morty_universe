@@ -37,7 +37,7 @@ class CharacteresList extends React.Component {
     this.handleCronenbergChange = this.handleCronenbergChange.bind(this);
     this.handlePoopybuttholeChange = this.handlePoopybuttholeChange.bind(this);
     // this.handleNextPage = this.handleNextPage.bind(this);
-    this.handlePreviousPage = this.handlePreviousPage.bind(this);
+    // this.handlePreviousPage = this.handlePreviousPage.bind(this);
     //this.getRickAndMorty = this.getRickAndMorty.bind(this);
     this.getCharactersByPage = this.getCharactersByPage.bind(this);
     
@@ -60,12 +60,12 @@ class CharacteresList extends React.Component {
   //   })
   // }
 
-  handlePreviousPage() {
-    const previousPage = this.state.page-1
-    this.setState({
-      page: previousPage,
-    })
-  }
+  // handlePreviousPage() {
+  //   const previousPage = this.state.page-1
+  //   this.setState({
+  //     page: previousPage,
+  //   })
+  // }
 
   handleAliveChange(event) {
     this.setState({
