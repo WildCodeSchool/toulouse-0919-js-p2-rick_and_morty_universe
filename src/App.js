@@ -5,7 +5,7 @@ import HumansList from './components/HumansList';
 import HeaderPlanets from './components/HeaderPlanets';
 import Alienlist from './components/Alienlist';
 import PlanetsList from './components/PlanetsList';
-import CharacterPage from './components/CharacterePage';
+import CharacterPage from './components/CharacterPage';
 import { Link, Switch, Route } from 'react-router-dom';
 
 
@@ -31,7 +31,7 @@ function App() {
           <HumanHeader />
           <HumansList />
         </Route>
-        <Route path="/page/:id" component={CharacterPage} />
+        <Route path="/page/:id" component={CharacterPage} /> 
       </Switch>
     </div>
   );
