@@ -1,0 +1,15 @@
+.PlanetsHeader {
+  display: flex;
+  align-items: stretch;
+  height: 15em;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+.ImageHeader {
+  width: 100%;
+}
+.PlanetsHeader .bigTitle {
+  display: flex;
+  position: absolute;
+  color: white;
+}
