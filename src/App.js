@@ -9,6 +9,7 @@ import AccueilPage from './components/AccueilPage';
 import PersoAccueil from './components/PersoAccueil';
 import SideBar from './components/sidebar';
 import Footer from './components/Footer';
+
 function App() {
   return (
     <div className="App">
@@ -30,5 +31,5 @@ function App() {
     </div>
   );
 };
+
 export default App;
-Collapse
