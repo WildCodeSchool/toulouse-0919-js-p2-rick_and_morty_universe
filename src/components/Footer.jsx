@@ -27,7 +27,7 @@ function Footer() {
         <a href="https://github.com/">
           <img className="icone" src={Github} alt="github" />
         </a>
-        <a href="https://github.com/">
+        <a href="">
           <img className="icone" src={Linkedin} alt="linkedin" />
         </a>
       </div>
