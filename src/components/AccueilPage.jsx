@@ -2,6 +2,7 @@ import React from 'react';
 import './AccueilPage.css';
 import titleimage from '../imageaccueil/titleimage.png';
 import SearchForm from './SearchForm';
+import CharacterPage from './CharacterPage';
 
 function AccueilPage() {
   return (
@@ -10,7 +11,7 @@ function AccueilPage() {
         <img src={titleimage} alt="title logo" className="title-img" />
         <h1 className="title-accueil">Universe</h1>
       </div>
-      <SearchForm />
+      <SearchForm path="/page/:id" component={CharacterPage} />
     </div>
   );
 }
