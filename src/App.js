@@ -23,10 +23,6 @@ function App() {
         </div>
           </Route>
         <Route path="/characters" >
-<<<<<<< HEAD
-          
-=======
->>>>>>> 0d56d9335d63149a41133e861e378861dc7b9b09
           <CharactersListHeader />
           <CharacteresList />
         </Route>
