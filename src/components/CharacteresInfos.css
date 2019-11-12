@@ -10,7 +10,7 @@
     list-style-type: none;
 }
 
-.link {
+.link, .link:visited, .link:hover {
     text-decoration: none;
-    color: black;
+    color: #ddd;
 }

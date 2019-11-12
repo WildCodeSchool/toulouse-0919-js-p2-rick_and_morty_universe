@@ -14,15 +14,16 @@ function App() {
   return (
     <div className="App">
       <Switch>
+          <Route exact path="/">
         <div className="home">
-          <Route>
             <SideBar pageWrapId={'accueil'} outerContainerId={'root'} />
             <AccueilPage />
             <PersoAccueil />
             <Footer />
-          </Route>
         </div>
-        <Route path="/characters">
+          </Route>
+        <Route path="/characters" >
+          {/* <p>allo</p> */}
           <CharactersListHeader />
           <CharacteresList />
         </Route>
