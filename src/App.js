@@ -23,7 +23,6 @@ function App() {
         </div>
           </Route>
         <Route path="/characters" >
-          {/* <p>allo</p> */}
           <CharactersListHeader />
           <CharacteresList />
         </Route>

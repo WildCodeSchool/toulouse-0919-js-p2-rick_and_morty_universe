@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
 import { Input } from 'reactstrap';
 import Suggestions from './Suggestions';
 
