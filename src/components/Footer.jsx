@@ -20,7 +20,7 @@ function Footer() {
         <a href="https://www.netflix.com/">
           <img className="icone" src={Netflix} alt="netflix" />
         </a>
-        /
+        
         <a href="https://www.youtube.com/">
           <img className="icone" src={Youtube} alt="youtube" />
         </a>

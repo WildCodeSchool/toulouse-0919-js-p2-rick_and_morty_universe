@@ -14,20 +14,20 @@ function App() {
   return (
     <div className="App">
       <Switch>
-          <Route exact path="/">
-        <div className="home">
+        <Route exact path="/">
+          <div className="home">
             <SideBar pageWrapId={'accueil'} outerContainerId={'root'} />
             <AccueilPage />
             <PersoAccueil />
-            <Footer />
-        </div>
-          </Route>
+          </div>
+        </Route>
         <Route path="/characters" >
           <CharactersListHeader />
           <CharacteresList />
         </Route>
         <Route path="/page/:id" component={CharacterPage} />
       </Switch>
+      <Footer />
     </div>
   );
 }

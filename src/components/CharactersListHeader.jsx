@@ -3,8 +3,8 @@ import React from 'react';
 function CharactersListHeader() {
   return (
     <nav className="Navbar">
-       <div className="BannerHeader">
-       </div> 
+      <div className="BannerHeader">
+      </div>
     </nav>
   );
 }
