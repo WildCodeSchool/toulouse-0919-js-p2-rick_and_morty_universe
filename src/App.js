@@ -3,6 +3,7 @@ import './App.css';
 import CharacterPage from './components/CharacterPage';
 import CharactersListHeader from './components/CharactersListHeader';
 import CharacteresList from './components/CharacteresList';
+import SourcePage from './components/SourcePage';
 /* eslint-disable import/no-unresolved */
 import { Switch, Route } from 'react-router-dom';
 import AccueilPage from './components/AccueilPage';
@@ -27,6 +28,9 @@ function App() {
           <CharacteresList />
         </Route>
         <Route path="/page/:id" component={CharacterPage} />
+        <Route>
+          <SourcePage />
+        </Route>
       </Switch>
     </div>
   );
