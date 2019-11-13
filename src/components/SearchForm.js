@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Input } from 'reactstrap';
 import Suggestions from './Suggestions';
+import './SearchForm.css';
 
 const API_URL = 'https://rickandmortyapi.com/api/character/';
 
