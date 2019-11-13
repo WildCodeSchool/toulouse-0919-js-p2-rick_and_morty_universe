@@ -10,10 +10,12 @@
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
+
+  margin-top: 80px;
 }
 
 .title-img {
-  width: 60%;
+  width: 70%;
   display: flex;
   align-items: flex-start;
   justify-content: center;

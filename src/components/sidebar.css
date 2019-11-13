@@ -63,6 +63,11 @@
   font-size: 1.15em;
 }
 
+/* Menu width style */
+.bm-menu-wrap{
+  width: 150px !important;
+}
+
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: violet;

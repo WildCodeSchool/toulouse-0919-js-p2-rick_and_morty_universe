@@ -45,7 +45,7 @@ class SearchForm extends Component {
           ref={input => (this.search = input)}
           onChange={this.handleInputChange}
           id="nameInput"
-          class="form-control"
+          class="form-control search-input"
           type="text"
         />
         <Suggestions results={this.state.results} />

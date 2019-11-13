@@ -2,7 +2,8 @@
   z-index: 3;
 }
 
-.SearchForm{
+.search-input{
+  height: 30px !important;
 }
 
 
