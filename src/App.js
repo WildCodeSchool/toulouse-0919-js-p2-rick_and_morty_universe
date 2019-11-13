@@ -20,6 +20,7 @@ function App() {
             <AccueilPage />
             <PersoAccueil />
           </div>
+          <Footer />
         </Route>
         <Route path="/characters" >
           <CharactersListHeader />
@@ -27,7 +28,6 @@ function App() {
         </Route>
         <Route path="/page/:id" component={CharacterPage} />
       </Switch>
-      <Footer />
     </div>
   );
 }
