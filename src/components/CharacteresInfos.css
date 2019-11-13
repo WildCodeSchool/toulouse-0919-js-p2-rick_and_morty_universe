@@ -16,40 +16,28 @@
     
 }
 
-.characteresInfos img {
-    width: 200px;
-    height: 200px;
+.vignette {
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
-    padding-top: 1em;
-    padding-left: 1em;
 }
 
-.vignette {
-    border-radius: 10%;
-
-}
-
-
-.blocInformations {
-    list-style-type: none;
-    
-}
 
 .link, .link:visited, .link:hover {
+    display: block;
     text-decoration: none;
     color: black;
     font-size: 2em;
 }
 
 .characteresname {
+    width: 100%;
     color: #3e8e41;
 }
 
 @media screen and (min-width: 720px) {
-    .characteresInfos {
-        width: 30%;
-    }
+    
     .characters {
         flex-direction: row;
     }

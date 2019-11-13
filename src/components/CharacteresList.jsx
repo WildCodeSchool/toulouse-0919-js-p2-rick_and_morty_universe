@@ -236,7 +236,7 @@ class CharacteresList extends React.Component {
           pageStart={1}
           loadMore={this.getCharactersByPage}
           hasMore={true || false}
-          loader={<div className="loader" key={0}>Loading ...</div>}>
+          loader={<div className="loader" key={0}>Chargement ...</div>}>
           {characters}
         </InfiniteScroll>
         </div>

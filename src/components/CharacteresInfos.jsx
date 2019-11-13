@@ -8,11 +8,8 @@ function CharacteresInfos({ characteresInfos }) {
     <Link className="link" to={`page/${characteresInfos.id}`}>
       <div className="characteresInfos">
         <img className="vignette" src={characteresInfos.image} alt={characteresInfos.character} />
-        <ul className="blocInformations">
-          <li>
-            <strong className="characteresname">{characteresInfos.name}</strong>
-          </li>
-        </ul>
+        
+        <strong className="characteresname">{characteresInfos.name}</strong>
       </div>
     </Link>
   );
