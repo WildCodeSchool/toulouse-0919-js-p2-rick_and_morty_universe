@@ -1,0 +1,83 @@
+.block{
+    margin:
+}
+.titleimage{
+    display: flex;;
+    margin-left: auto;
+    margin-right: auto;
+    width : 25%;
+    margin-bottom : 40px; ;
+}
+.imagesources{
+    width : 35%;
+    border-radius:20px;
+    display : flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;;
+}
+.bouton{
+    display: flex;
+    flex-direction : row;
+    justify-content:center;
+    align-items : flex-end; 
+}
+.bouton1{
+    display: flex;
+    flex-direction : row;
+    justify-content:center;
+    align-items : flex-end; 
+}
+.infoSources{
+    display: flex;
+    flex-direction : row;
+    justify-content:center;
+    align-items : flex-end; 
+    font-family : 'Freckle Face';
+    font-size : 32px;
+    border-radius:20% ;
+    color : white;
+    width: 350px;
+    margin : 30px;
+    background:rgb(12, 143, 16);
+    border : 0px solid black;
+}
+.infoSources:hover{
+    background: rgb(16, 114, 20);
+}
+.p{
+    color: white;
+}
+@media screen and (max-width: 751px){
+    .imagesources{
+        width:60%;
+    }
+    .titleimage{
+        width: 40%;
+    }
+    .bouton{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items : flex-end; 
+    }
+    /* .bouton1{
+        display : flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items : flex-end; 
+    } */
+    .infoSources{
+        width: 250px;
+        margin: 10px;
+        font-size : 25px;
+    }
+    .deuxBoutons{
+        display: flex;
+        justify-content:center;
+    }
+}
+
+
+
+

@@ -14,17 +14,12 @@ function CharactersListHeader() {
         </Link>
         <div className="menu">
           <p>
-            <Link to="/contact" className="textmenu">
-              <strong>Contact</strong>
-            </Link>
-          </p>
-          <p>
-            <Link to="/about" className="textmenu">
+            <Link className="textmenu" to="/about">
               <strong>About</strong>
             </Link>
           </p>
           <p>
-            <Link to="/sources" className="textmenu">
+            <Link className="textmenu" to="/sources">
               <strong>Sources</strong>
             </Link>
           </p>

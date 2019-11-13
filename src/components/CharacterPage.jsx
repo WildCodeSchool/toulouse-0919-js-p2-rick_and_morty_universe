@@ -73,8 +73,8 @@ class CharacterPage extends Component {
                     </div>
                 </div>
             </div>
-        )
-    }
+        );
+    };
 };
 
 export default CharacterPage;

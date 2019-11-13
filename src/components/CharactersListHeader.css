@@ -6,14 +6,19 @@
     height: 55px;
 }
 
+.logo-img:hover {
+    zoom: 1.2;
+}
+
 .BannerHeader {
-    /* background-color: black; */
-    background-image: url('');
+    background-image: url('http://krembojeans.com/img/parallax/parallax-1%20z.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
     height: 150px;
     width: 100%;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .menu {
@@ -22,22 +27,21 @@
   flex-direction: row;
   padding-right: 3%;
   padding-top: 3em;
-
 }
 
 .textmenu {
     font-family: 'Freckle Face', cursive;
-    color: rgb(45, 212, 51);
     font-size: 2em;
     padding-left: 1em;
+    justify-content: baseline;
+    color:  #4CAF50;
+    opacity: 0.8;
 }
 
 .textmenu:hover {
-    color: rgb(15, 110, 18);
-}
-
-.textmenu:visited {
-    color: rgb(48, 233, 54);
+    color: rgb(52, 243, 34);
+    text-decoration: none;
+    zoom: 1.2;
 }
 
 .textmenu:link {

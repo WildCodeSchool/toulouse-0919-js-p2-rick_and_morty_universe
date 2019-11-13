@@ -3,7 +3,6 @@ import axios from 'axios';
 import CharacteresInfos from './CharacteresInfos';
 import './CharacteresList.css';
 import InfiniteScroll from 'react-infinite-scroller';
-import CharactersListHeader from './CharactersListHeader';
 
 class CharacteresList extends React.Component {
   constructor(props) {
@@ -22,7 +21,7 @@ class CharacteresList extends React.Component {
       filterAnimals: false,
       filterRobot: false,
       filterCronenberg: false,
-      filterPoopybutthole: false,
+      filterPoopybutthole: false
     };
     this.handleAliveChange = this.handleAliveChange.bind(this);
     this.handleDeadChange = this.handleDeadChange.bind(this);
@@ -239,8 +238,7 @@ class CharacteresList extends React.Component {
         </InfiniteScroll>
       </div>
     );
-  }
-}
-
+  };
+};
 
 export default CharacteresList;
