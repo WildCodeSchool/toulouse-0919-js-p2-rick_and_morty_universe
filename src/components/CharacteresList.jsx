@@ -3,6 +3,7 @@ import axios from 'axios';
 import CharacteresInfos from './CharacteresInfos';
 import './CharacteresList.css';
 import InfiniteScroll from 'react-infinite-scroller';
+import Scroll from 'react-infinite-scroll-component';
 import CharactersListHeader from './CharactersListHeader';
 
 class CharacteresList extends React.Component {
@@ -221,7 +222,7 @@ class CharacteresList extends React.Component {
     });
 
     return (
-      <div>
+      <div className="list">
 
         <div class="dropdownContainer">
 
@@ -262,18 +263,17 @@ class CharacteresList extends React.Component {
         <button onClick={this.handleNextPage}>Next</button>
         <span>{this.state.page}</span> */}
 
+
+  
         <InfiniteScroll
+          className="characters"
           pageStart={1}
           loadMore={this.getCharactersByPage}
           hasMore={true || false}
-          loader={<div className="loader" key={0}>Loading ...</div>}
-        >
+          loader={<div className="loader" key={0}>Loading ...</div>}>
           {characters}
         </InfiniteScroll>
-
-
-
-      </div>
+        </div>
 
     );
 
