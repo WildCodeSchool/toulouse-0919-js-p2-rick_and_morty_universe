@@ -1,3 +1,127 @@
+@keyframes rotating {
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(180deg);
+  }
+}
+
+.rotating-beth{
+  animation: rotating 7s linear infinite alternate-reverse;
+}
+.rotating-beth:hover{
+  animation-play-state: paused;
+  }
+
+.rotating-jerry {
+  animation: rotating 5.3s linear infinite alternate-reverse;
+}
+
+.rotating-jerry:hover{
+  animation-play-state: paused;
+  }
+
+.rotating-poopy {
+  animation: rotating 6.5s linear infinite alternate-reverse;
+  }
+  
+.rotating-poopy:hover{
+  animation-play-state: paused;
+  }
+
+  .rotating-meeseeks {
+    animation: rotating 5.4s  linear infinite alternate;
+  }
+    
+  .rotating-meeseeks:hover{
+    animation-play-state: paused;
+  }
+
+  .rotating-morty {
+    animation: rotating 9s  linear infinite alternate;
+  }
+        
+  .rotating-morty:hover{
+    animation-play-state: paused;
+  }
+
+  .rotating-pickle {
+    animation: rotating 5.4s  linear infinite alternate-reverse;
+  }
+        
+  .rotating-pickle:hover{
+    animation-play-state: paused;
+  }
+
+  .rotating-rick {
+    animation: rotating 9s  linear infinite alternate-reverse;
+  }
+        
+  .rotating-rick:hover{
+    animation-play-state: paused;
+  }
+  .rotating-terry {
+    animation: rotating 5.4s  linear infinite alternate;
+  }
+          
+  .rotating-terry:hover{
+    animation-play-state: paused;
+  }
+
+  .rotating-scquanchy {
+    animation: rotating 5.4s  linear infinite alternate-reverse;
+  }
+          
+  .rotating-scquanchy:hover{
+    animation-play-state: paused;
+  }
+
+  .rotating-snowball {
+    animation: rotating 5.4s  linear infinite alternate;
+  }
+          
+  .rotating-snowball:hover{
+    animation-play-state: paused;
+  }
+
+  .rotating-summer {
+    animation: rotating 5.4s  linear infinite alternate-reverse;
+  }
+          
+  .rotating-summer:hover{
+    animation-play-state: paused;
+  }
+  
+.zoom {
+  padding: 50px;
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+.zoom-main-characters {
+  padding: 50px;
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom-main-characters:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(3.5); 
+}
+
+
 #perso {
   display: flex;
   flex-direction: column;
@@ -32,10 +156,18 @@
   top: 850px;
 }
 
+.beth-img{
+  transform: scaleX(-1);
+}
+
 .jerry {
   position: absolute;
   right: 6%;
   top: 500px;
+}
+
+.jerry-img {
+  transform: scaleX(-1);
 }
 
 .mr_poopybutthole {
