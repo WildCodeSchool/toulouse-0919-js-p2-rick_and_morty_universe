@@ -21,6 +21,13 @@
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+.vignette {
+    border-radius: 10%;
+
 }
 
 
@@ -31,18 +38,18 @@
 
 .link, .link:visited, .link:hover {
     text-decoration: none;
-    color: #ddd;
-    
+    color: black;
+    font-size: 2em;
 }
 
+.characteresname {
+    color: #3e8e41;
+}
 
-@media screen and (min-width: 950px) {
-    .characters {
-        flex-direction: row;
+@media screen and (min-width: 720px) {
+    .characteresInfos {
+        width: 30%;
     }
-}
-
-@media screen and (min-width: 751px) and (max-width : 950px){
     .characters {
         flex-direction: row;
     }

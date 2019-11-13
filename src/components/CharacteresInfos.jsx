@@ -7,16 +7,14 @@ function CharacteresInfos({ characteresInfos }) {
   return (
     <Link className="link" to={`page/${characteresInfos.id}`}>
       <div className="characteresInfos">
-        <img src={characteresInfos.image} alt={characteresInfos.character} />
+        <img className="vignette" src={characteresInfos.image} alt={characteresInfos.character} />
         <ul className="blocInformations">
-          <li> name :{characteresInfos.name} </li>
-          <li> type : {characteresInfos.type} </li>
-          <li> gender : {characteresInfos.gender} </li>
-          <li> origin : {characteresInfos.origin.name} </li>
-          <li> location : {characteresInfos.location.name} </li>
+          <li>
+            <strong className="characteresname">{characteresInfos.name}</strong>
+          </li>
         </ul>
       </div>
-    </ Link>
+    </Link>
   );
 }
 
