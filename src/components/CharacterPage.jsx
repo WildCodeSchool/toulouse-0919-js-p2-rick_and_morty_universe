@@ -62,7 +62,7 @@ class CharacterPage extends Component {
                     <div className="character-infos">
                         <ul>
                             {this.state.character && <li>Status: {this.state.character.status}</li>}
-                            {this.state.character && <li>Species:{this.state.character.species}</li>}
+                            {this.state.character && <li>Species: {this.state.character.species}</li>}
                             {this.state.character && <li>Gender: {this.state.character.gender}</li>}
                         </ul>
                     
