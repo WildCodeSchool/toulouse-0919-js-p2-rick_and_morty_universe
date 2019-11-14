@@ -1,13 +1,17 @@
 .containerfooter {
+  width: 100%;
+  padding: 8px;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
   bottom: 0px;
-  padding-bottom: 20px;
-  width: 100%;
 }
 
+.network{
+  display: none;
+}
 .text-footer {
   font-size: 12px;
   line-height: 15px;
@@ -27,17 +31,13 @@
   text-align: center;
 }
 
-.network {
-  display: none;
-}
 
 @media screen and (min-width: 751px) {
   .containerfooter {
-    position: absolute;
+    display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: black;
+    justify-content: space-between;
   }
   .icone {
     height: 45px;

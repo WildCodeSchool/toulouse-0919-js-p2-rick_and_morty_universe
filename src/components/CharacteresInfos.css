@@ -1,8 +1,10 @@
-.characteresInfos {
-    padding: 0;
+
+.characters {
+    max-width: 1300px;
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
 }
 
 .characteresInfos:hover {
@@ -17,9 +19,43 @@
 
 .blocInformations {
     list-style-type: none;
+=======
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.characteresInfos {
+    padding: 10px;
+    display: flex;
+    flex-direction: column ;
+    align-items: center ;
+    
+}
+
+.vignette {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+>>>>>>> dev
+}
+
+
 .link, .link:visited, .link:hover {
+    display: block;
     text-decoration: none;
-    color: #ddd;
+    color: black;
+    font-size: 2em;
+}
+
+.characteresname {
+    width: 100%;
+    color: #3e8e41;
+}
+
+@media screen and (min-width: 720px) {
+    
+    .characters {
+        flex-direction: row;
+    }
 }

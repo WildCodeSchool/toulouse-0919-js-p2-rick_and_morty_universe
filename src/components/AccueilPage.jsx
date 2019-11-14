@@ -13,6 +13,6 @@ function AccueilPage() {
       <SearchForm />
     </div>
   );
-}
+};
 
 export default AccueilPage;

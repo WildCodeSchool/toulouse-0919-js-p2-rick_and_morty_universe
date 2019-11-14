@@ -3,7 +3,10 @@ import axios from 'axios';
 import CharacteresInfos from './CharacteresInfos';
 import './CharacteresList.css';
 import InfiniteScroll from 'react-infinite-scroller';
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
 
 class CharacteresList extends React.Component {
   constructor(props) {
@@ -36,12 +39,13 @@ class CharacteresList extends React.Component {
     this.handleRobotsChange = this.handleRobotsChange.bind(this);
     this.handleCronenbergChange = this.handleCronenbergChange.bind(this);
     this.handlePoopybuttholeChange = this.handlePoopybuttholeChange.bind(this);
-    // this.handleNextPage = this.handleNextPage.bind(this);
-    // this.handlePreviousPage = this.handlePreviousPage.bind(this);
-    //this.getRickAndMorty = this.getRickAndMorty.bind(this);
     this.getCharactersByPage = this.getCharactersByPage.bind(this);
 
+    this.femaleRef = React.createRef();
+    this.maleRef = React.createRef();
 
+    this.aliveRef = React.createRef();
+    this.deadRef = React.createRef();
 
   }
 
@@ -49,45 +53,39 @@ class CharacteresList extends React.Component {
     this.getCharactersByPage(1)
   }
 
-  // componentDidUpdate(){
-  //   this.getRickAndMorty()
-  // }
-
-  // handleNextPage() {
-  //   const nextPage = this.state.page+1
-  //   this.setState({
-  //     page: nextPage,
-  //   })
-  // }
-
-  // handlePreviousPage() {
-  //   const previousPage = this.state.page-1
-  //   this.setState({
-  //     page: previousPage,
-  //   })
-  // }
-
   handleAliveChange(event) {
+    var deadCheckbox = this.deadRef.current;
+    deadCheckbox.checked = false;
     this.setState({
-      filterAlive: !this.state.filterAlive
+      filterAlive: !this.state.filterAlive,
+      filterDead: false
     })
   }
 
   handleDeadChange(event) {
+    var aliveCheckbox = this.aliveRef.current;
+    aliveCheckbox.checked = false;
     this.setState({
-      filterDead: !this.state.filterDead
+      filterDead: !this.state.filterDead,
+      filterAlive: false
     })
   }
 
   handleMaleChange(event) {
+    var femaleCheckbox = this.femaleRef.current;
+    femaleCheckbox.checked = false;
     this.setState({
-      filterMale: !this.state.filterMale
+      filterMale: !this.state.filterMale,
+      filterFemale: false
     })
   }
 
   handleFemaleChange(event) {
+    var maleCheckbox = this.maleRef.current;
+    maleCheckbox.checked = false;
     this.setState({
-      filterFemale: !this.state.filterFemale
+      filterFemale: !this.state.filterFemale,
+      filterMale: false
     })
   }
 
@@ -149,11 +147,11 @@ class CharacteresList extends React.Component {
         })
       .then(response => response.data)
       .then(data => {
-        this.setState((prevState) => {
+        this.setState(prevState => {
           const newListOfCharacters = [...prevState.listOfCharacters, ...data.results]
           return {
             listOfCharacters: newListOfCharacters
-          }
+          };
         });
       });
   }
@@ -221,18 +219,16 @@ class CharacteresList extends React.Component {
     });
 
     return (
-      <div>
 
+      <div className="gradient">
         <div class="dropdownContainer">
-
           <div class="dropdown">
             <button class="dropbtn">Gender</button>
             <div class="dropdown-content">
-              <input type="checkbox" name="female" value="female" onChange={this.handleFemaleChange} />Female<br />
-              <input type="checkbox" name="male" value="male" onChange={this.handleMaleChange} />Male<br />
+              <input ref={this.femaleRef} type="checkbox" name="female" value="female" onChange={this.handleFemaleChange} />Female<br />
+              <input ref={this.maleRef} type="checkbox" name="male" value="male" onChange={this.handleMaleChange} />Male<br />
             </div>
           </div>
-
           <div class="dropdown">
             <button class="dropbtn">Species</button>
             <div class="dropdown-content">
@@ -244,42 +240,29 @@ class CharacteresList extends React.Component {
               <input type="checkbox" name="mythologs" value="mythologs" onChange={this.handleMythologChange} />Mytholog<br />
               <input type="checkbox" name="poopybutthole" value="poopybutthole" onChange={this.handlePoopybuttholeChange} />Poopybutthole<br />
               {/* <input type="checkbox" name="robots" value="robots" onChange={this.handleRobotsChange}/>Robots<br/> */}
-
-
             </div>
           </div>
 
           <div class="dropdown">
             <button class="dropbtn">Status</button>
             <div class="dropdown-content">
-              <input type="checkbox" name="alive" value="alive" onChange={this.handleAliveChange} />Alive<br />
-              <input type="checkbox" name="dead" value="dead" onChange={this.handleDeadChange} />Dead<br />
+              <input ref={this.aliveRef} type="checkbox" name="alive" value="alive" onChange={this.handleAliveChange} />Alive<br />
+              <input ref={this.deadRef} type="checkbox" name="dead" value="dead" onChange={this.handleDeadChange} />Dead<br />
             </div>
           </div>
         </div>
 
-        {/* <button onClick={this.handlePreviousPage}>Previous</button>
-        <button onClick={this.handleNextPage}>Next</button>
-        <span>{this.state.page}</span> */}
-
         <InfiniteScroll
+          className="characters"
           pageStart={1}
           loadMore={this.getCharactersByPage}
           hasMore={true || false}
-          loader={<div className="loader" key={0}>Loading ...</div>}
-        >
+          loader={<div className="loader" key={0}>Chargement ...</div>}>
           {characters}
         </InfiniteScroll>
-
-
-
-      </div>
-
+        </div>
     );
-
-
   }
-
 }
 
 

@@ -48,6 +48,7 @@ class CharacterPage extends Component {
 
     render() {
         return (
+<<<<<<< HEAD
             <div>
             <div className="allitems">
                
@@ -55,6 +56,10 @@ class CharacterPage extends Component {
        </div> 
     
                 <div className="image-character">
+=======
+            <div className="allitems">
+                <div>
+>>>>>>> dev
                     {this.state.character && <img src={this.state.character.image} alt={this.state.character.name} />}
                 </div>
                 <div className="infos">

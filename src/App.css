@@ -4,13 +4,18 @@ html {
 }
 
 body {
+<<<<<<< HEAD
   background-image: url(./imageaccueil/backgroundimage.png);
   width: 100%;
   margin: 0;
   padding: 0;
   clear: both;
+=======
+  background-image: url(./imageaccueil/planetTest.png);
+>>>>>>> dev
 
   background-attachment: fixed;
-  background-size: auto;
+  background-size: cover;
   height: 100%;
+  background-repeat: no-repeat;
 }

@@ -10,9 +10,12 @@ function Footer() {
   return (
     <div className="containerfooter">
       <div className="sectionfooter">
-        <div className="titlefooter">Universe</div>
-        <p className="text-footer">Official website</p>
+        <div className="titlefooter">Rick and Morty </div>
+        <div className="text-footer">
+        <a href="https://www.rickandmorty.com/">Official website</a>
+        </div>
       </div>
+
       <div className="network">
         <a href="https://codepen.io">
           <img className="icone" src={Codepen} alt="codepen" />
@@ -20,14 +23,14 @@ function Footer() {
         <a href="https://www.netflix.com/">
           <img className="icone" src={Netflix} alt="netflix" />
         </a>
-        /
+        
         <a href="https://www.youtube.com/">
           <img className="icone" src={Youtube} alt="youtube" />
         </a>
         <a href="https://github.com/">
           <img className="icone" src={Github} alt="github" />
         </a>
-        <a href="">
+        <a href="https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=lucie-bento-16737a178&trk=public_profile_nav-header-join">
           <img className="icone" src={Linkedin} alt="linkedin" />
         </a>
       </div>

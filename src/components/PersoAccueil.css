@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @keyframes rotating {
   from{
       transform: rotate(0deg);
@@ -129,21 +130,17 @@
   flex-direction: column;
   align-items: center;
 }
+=======
+>>>>>>> dev
 
-.perso-accueil img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-}
 
 .perso-accueil {
-  display: inline-block;
-
+  display: none;
   z-index: 2;
 }
 
 .portal-img {
+  display: flex;
   width: 100%;
 }
 
@@ -152,12 +149,8 @@
   position: relative;
 }
 
-.beth {
-  position: absolute;
-  left: 10%;
-  top: 850px;
-}
 
+<<<<<<< HEAD
 .beth-img{
   transform: scaleX(-1);
 }
@@ -177,44 +170,86 @@
   right: 20%;
   top: 800px;
 }
+=======
+@media screen and (min-width: 751px) {
 
-.meeseeks {
-  position: absolute;
-  right: 20%;
-  top: 500px;
+  #perso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+>>>>>>> dev
+
+  .perso-accueil img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .perso-accueil {
+    display: inline-block;
+  }
+
+
+  .beth {
+    position: absolute;
+    left: 10%;
+    top: 850px;
+  }
+
+  .jerry {
+    position: absolute;
+    right: 6%;
+    top: 500px;
+  }
+
+  .mr_poopybutthole {
+    position: absolute;
+    right: 20%;
+    top: 800px;
+  }
+
+  .meeseeks {
+    position: absolute;
+    right: 20%;
+    top: 500px;
+  }
+  .morty {
+    position: absolute;
+    left: 30%;
+    top: 800px;
+  }
+  .pickle_rick {
+    position: absolute;
+    right: 10%;
+    top: 200px;
+  }
+  .rick {
+    position: absolute;
+    right: 32%;
+    top: 300px;
+  }
+  .scary_terry {
+    position: absolute;
+    left: 15%;
+    top: 500px;
+  }
+  .scquanchy {
+    position: absolute;
+    left: 10%;
+    top: 200px;
+  }
+  .snowball {
+    position: absolute;
+    right: 4%;
+    top: 760px;
+  }
+  .summer {
+    position: absolute;
+    left: 30%;
+    top: 300px;
+  }
 }
-.morty {
-  position: absolute;
-  left: 30%;
-  top: 800px;
-}
-.pickle_rick {
-  position: absolute;
-  right: 10%;
-  top: 200px;
-}
-.rick {
-  position: absolute;
-  right: 32%;
-  top: 300px;
-}
-.scary_terry {
-  position: absolute;
-  left: 15%;
-  top: 500px;
-}
-.scquanchy {
-  position: absolute;
-  left: 10%;
-  top: 200px;
-}
-.snowball {
-  position: absolute;
-  right: 4%;
-  top: 760px;
-}
-.summer {
-  position: absolute;
-  left: 30%;
-  top: 300px;
-}
+
+

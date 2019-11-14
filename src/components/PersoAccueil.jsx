@@ -12,7 +12,6 @@ import scary_terryimg from '../img-perso-accueil/scary_terry1.jpg';
 import scquanchyimg from '../img-perso-accueil/scquanchy1.jpg';
 import snowballimg from '../img-perso-accueil/snowball1.jpg';
 import summerimg from '../img-perso-accueil/summer1.jpg';
-
 import portalimg from '../imageaccueil/portalimg.png';
 
 

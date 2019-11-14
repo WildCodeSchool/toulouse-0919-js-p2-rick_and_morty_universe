@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .BannerHeaderCharacterPage {
     /* background-color: black; */
     background-image: url('./ImageBannière/bannière.png');
@@ -49,14 +50,22 @@ h1 {
 }
 
 .allitems{
+=======
+.allitems {
+>>>>>>> dev
     display: flex;
     padding: 0;
     flex-direction: column;
     align-items: center;
     border: none;
     color: aliceblue;
+<<<<<<< HEAD
     font-family: 'Freckle Face', cursive;
 } 
+=======
+}
+
+>>>>>>> dev
 .allitems li {
     list-style-type: none;
 } 
