@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './CharactersListHeader.css';
 import logo1 from '../imageaccueil/logo1.png';
+import SideBar from './sidebar';
 
 function CharactersListHeader() {
   return (
@@ -23,6 +24,9 @@ function CharactersListHeader() {
               <strong>Sources</strong>
             </Link>
           </p>
+        </div>
+        <div className="burgermenu">
+          <SideBar pageWrapId="accueil" outerContainerId="root" />
         </div>
       </div>
     </nav>
