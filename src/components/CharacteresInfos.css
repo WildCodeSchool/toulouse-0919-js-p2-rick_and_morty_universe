@@ -23,6 +23,7 @@
 
 .characteresname {
     color: #3e8e41;
+    font-family: 'Freckle Face', cursive;
 }
 
 @media screen and (min-width: 720px) {

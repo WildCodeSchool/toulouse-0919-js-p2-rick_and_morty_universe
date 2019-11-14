@@ -1,6 +1,4 @@
-.block{
-    margin:
-}
+
 .titleimage{
     display: flex;;
     margin-left: auto;
@@ -21,13 +19,9 @@
     flex-direction : row;
     justify-content:center;
     align-items : flex-end; 
+    flex-wrap: wrap;
 }
-.bouton1{
-    display: flex;
-    flex-direction : row;
-    justify-content:center;
-    align-items : flex-end; 
-}
+
 .infoSources{
     display: flex;
     flex-direction : row;
@@ -48,6 +42,12 @@
 .p{
     color: white;
 }
+
+.textinfo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 @media screen and (max-width: 751px){
     .imagesources{
         width:60%;
@@ -61,20 +61,10 @@
         justify-content:center;
         align-items : flex-end; 
     }
-    /* .bouton1{
-        display : flex;
-        flex-direction: column;
-        justify-content:center;
-        align-items : flex-end; 
-    } */
     .infoSources{
         width: 250px;
         margin: 10px;
         font-size : 25px;
-    }
-    .deuxBoutons{
-        display: flex;
-        justify-content:center;
     }
 }
 

@@ -1,13 +1,14 @@
 import React from 'react';
 import axios from 'axios';
+import InfiniteScroll from 'react-infinite-scroller';
 import CharacteresInfos from './CharacteresInfos';
 import './CharacteresList.css';
-import InfiniteScroll from 'react-infinite-scroller';
 
 class CharacteresList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // eslint-disable-next-line react/no-unused-state
       page: 1,
       listOfCharacters: [],
       filterAlive: false,
@@ -39,7 +40,7 @@ class CharacteresList extends React.Component {
   }
 
   componentDidMount() {
-    this.getCharactersByPage(1)
+    this.getCharactersByPage(1);
   }
 
   handleAliveChange(event) {
