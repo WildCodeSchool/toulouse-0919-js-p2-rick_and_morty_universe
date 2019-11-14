@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Input } from 'reactstrap';
 import Suggestions from './Suggestions';
+import './SearchForm.css';
 
 const API_URL = 'https://rickandmortyapi.com/api/character/';
 
@@ -44,7 +45,7 @@ class SearchForm extends Component {
           ref={input => (this.search = input)}
           onChange={this.handleInputChange}
           id="nameInput"
-          class="form-control"
+          class="form-control search-input"
           type="text"
         />
         <Suggestions results={this.state.results} />

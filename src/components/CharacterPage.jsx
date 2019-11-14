@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './CharacterPage.css';
+import CharactersListHeader from './CharactersListHeader';
 
 class CharacterPage extends Component {
     constructor(props) {

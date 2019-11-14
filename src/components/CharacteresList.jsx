@@ -3,6 +3,7 @@ import axios from 'axios';
 import CharacteresInfos from './CharacteresInfos';
 import './CharacteresList.css';
 import InfiniteScroll from 'react-infinite-scroller';
+import Scroll from 'react-infinite-scroll-component';
 import CharactersListHeader from './CharactersListHeader';
 
 class CharacteresList extends React.Component {
@@ -36,36 +37,12 @@ class CharacteresList extends React.Component {
     this.handleRobotsChange = this.handleRobotsChange.bind(this);
     this.handleCronenbergChange = this.handleCronenbergChange.bind(this);
     this.handlePoopybuttholeChange = this.handlePoopybuttholeChange.bind(this);
-    // this.handleNextPage = this.handleNextPage.bind(this);
-    // this.handlePreviousPage = this.handlePreviousPage.bind(this);
-    //this.getRickAndMorty = this.getRickAndMorty.bind(this);
     this.getCharactersByPage = this.getCharactersByPage.bind(this);
-
-
-
   }
 
   componentDidMount() {
     this.getCharactersByPage(1)
   }
-
-  // componentDidUpdate(){
-  //   this.getRickAndMorty()
-  // }
-
-  // handleNextPage() {
-  //   const nextPage = this.state.page+1
-  //   this.setState({
-  //     page: nextPage,
-  //   })
-  // }
-
-  // handlePreviousPage() {
-  //   const previousPage = this.state.page-1
-  //   this.setState({
-  //     page: previousPage,
-  //   })
-  // }
 
   handleAliveChange(event) {
     this.setState({
@@ -149,11 +126,11 @@ class CharacteresList extends React.Component {
         })
       .then(response => response.data)
       .then(data => {
-        this.setState((prevState) => {
+        this.setState(prevState => {
           const newListOfCharacters = [...prevState.listOfCharacters, ...data.results]
           return {
             listOfCharacters: newListOfCharacters
-          }
+          };
         });
       });
   }
@@ -221,10 +198,9 @@ class CharacteresList extends React.Component {
     });
 
     return (
-      <div>
 
+      <div className="gradient">
         <div class="dropdownContainer">
-
           <div class="dropdown">
             <button class="dropbtn">Gender</button>
             <div class="dropdown-content">
@@ -232,7 +208,6 @@ class CharacteresList extends React.Component {
               <input type="checkbox" name="male" value="male" onChange={this.handleMaleChange} />Male<br />
             </div>
           </div>
-
           <div class="dropdown">
             <button class="dropbtn">Species</button>
             <div class="dropdown-content">
@@ -244,8 +219,6 @@ class CharacteresList extends React.Component {
               <input type="checkbox" name="mythologs" value="mythologs" onChange={this.handleMythologChange} />Mytholog<br />
               <input type="checkbox" name="poopybutthole" value="poopybutthole" onChange={this.handlePoopybuttholeChange} />Poopybutthole<br />
               {/* <input type="checkbox" name="robots" value="robots" onChange={this.handleRobotsChange}/>Robots<br/> */}
-
-
             </div>
           </div>
 
@@ -258,28 +231,17 @@ class CharacteresList extends React.Component {
           </div>
         </div>
 
-        {/* <button onClick={this.handlePreviousPage}>Previous</button>
-        <button onClick={this.handleNextPage}>Next</button>
-        <span>{this.state.page}</span> */}
-
         <InfiniteScroll
+          className="characters"
           pageStart={1}
           loadMore={this.getCharactersByPage}
           hasMore={true || false}
-          loader={<div className="loader" key={0}>Loading ...</div>}
-        >
+          loader={<div className="loader" key={0}>Chargement ...</div>}>
           {characters}
         </InfiniteScroll>
-
-
-
-      </div>
-
+        </div>
     );
-
-
   }
-
 }
 
 

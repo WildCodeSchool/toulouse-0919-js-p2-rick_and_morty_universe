@@ -1,0 +1,9 @@
+.searchbar {
+  z-index: 3;
+}
+
+.search-input{
+  height: 30px !important;
+}
+
+
