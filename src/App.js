@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import CharacterPage from './components/CharacterPage';
-import CharactersListHeader from './components/CharactersListHeader';
 import CharacteresList from './components/CharacteresList';
 /* eslint-disable import/no-unresolved */
 import { Switch, Route } from 'react-router-dom';
@@ -9,6 +8,7 @@ import AccueilPage from './components/AccueilPage';
 import PersoAccueil from './components/PersoAccueil';
 import SideBar from './components/sidebar';
 import Footer from './components/Footer';
+import ContactPage from './components/ContactPage';
 
 function App() {
   return (
@@ -16,17 +16,23 @@ function App() {
       <Switch>
         <Route exact path="/">
           <div className="home">
-            <SideBar pageWrapId={'accueil'} outerContainerId={'root'} />
+            <SideBar 
+            pageWrapId={'accueil'} 
+            outerContainerId={'root'} />
             <AccueilPage />
             <PersoAccueil />
           </div>
           <Footer />
         </Route>
         <Route path="/characters" >
-          <CharactersListHeader />
+          <SideBar 
+          pageWrapId={'accueil'} 
+          outerContainerId={'root'} 
+          page={"characters"}/>
           <CharacteresList />
         </Route>
         <Route path="/page/:id" component={CharacterPage} />
+        <Route path="/about" component={ContactPage} />
       </Switch>
     </div>
   );

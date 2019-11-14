@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Input } from 'reactstrap';
 import Suggestions from './Suggestions';
 import './SearchForm.css';
 
@@ -16,6 +15,10 @@ class SearchForm extends Component {
     axios.get(`${API_URL}?name=${this.state.query}`).then(({ data }) => {
       this.setState({
         results: data.results
+      });
+    }).catch(error => {
+      this.setState({
+        results: []
       });
     });
   };
@@ -45,7 +48,7 @@ class SearchForm extends Component {
           ref={input => (this.search = input)}
           onChange={this.handleInputChange}
           id="nameInput"
-          class="form-control search-input"
+          class="search-input"
           type="text"
         />
         <Suggestions results={this.state.results} />
