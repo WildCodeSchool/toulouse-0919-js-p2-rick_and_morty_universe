@@ -18,10 +18,14 @@ class BoutonDeux extends Component {
 
     render() {
         const link1 = this.state.show ? (
-            <div>
-                <p className="colorLink">https://www.fandom.com/</p>
-                <p className="colorLink">https://rickandmortyapi.com/</p>
-            </div>
+            <ul>
+                <li>
+                    <a className="colorLink" href='https://www.fandom.com/' target="_blank">Website1</a>
+                </li>
+                <li>
+                    <a className="colorLink" href='https://rickandmortyapi.com/' target="_blank">Website2</a>
+                </li>
+            </ul>
         ) : null;
         return (
             <div className="bouton">

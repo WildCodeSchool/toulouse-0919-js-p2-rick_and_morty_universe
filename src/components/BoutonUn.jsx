@@ -18,11 +18,17 @@ class BoutonUn extends Component {
 
   render() {
     const links = this.state.show ? (
-      <div>
-        <p className="colorLink">https://rickandmortyapi.com/api/character/</p>
-        <p className="colorLink">https://rickandmortyapi.com/api/location/</p>
-        <p className="colorLink">https://rickandmortyapi.com/api/episode/</p>
-      </div>
+      <ul>
+        <li>
+          <a className="colorLink" href='https://rickandmortyapi.com/api/character/' target="_blank">API of the characters</a>
+        </li>
+        <li>
+          <a className="colorLink" href='https://rickandmortyapi.com/api/location/' target="_blank">API of the locations </a>
+        </li>
+        <li>
+          <a className="colorLink" href='https://rickandmortyapi.com/api/episode/' target="_blank">API of the episodes </a>
+        </li>
+      </ul>
     ) : null;
     return (
       <div className="bouton">

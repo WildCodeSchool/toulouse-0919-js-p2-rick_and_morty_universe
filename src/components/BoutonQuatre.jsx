@@ -18,9 +18,14 @@ class BoutonDeux extends Component {
 
     render() {
         const link3 = this.state.show ? (
-            <div>
-                <p className= "colorLink">https://fonts.google.com/</p>
-            </div>
+            <ul>
+                <li>
+                    <a className="colorLink" href='https://fonts.google.com/specimen/Freckle+Face' target="_blank">Freckle Face</a>
+                </li>
+                <li>
+                    <a className="colorLink" href='https://fonts.google.com/specimen/Roboto' target="_blank">Roboto</a>
+                </li>
+            </ul>
         ) : null;
         return (
             <div className="bouton">

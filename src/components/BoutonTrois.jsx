@@ -18,12 +18,17 @@ class BoutonTrois extends Component {
 
     render() {
         const link2 = this.state.show ? (
-            <div>
-                <p className= "colorLink">https://codesandbox.io/s/nmy6x9wrj</p>
-                <p className= "colorLink">https://css-tricks.com/css-containment/</p>
-                <p className= "colorLink">https://www.npmjs.com/package/ngx-infinite-scroll</p>
-                <p className= "colorLink">http://react.tips/checkboxes-in-react/</p>
-            </div>
+            <ul>
+                <li>
+                    <a className="colorLink" href='https://codesandbox.io/s/nmy6x9wrj' target="_blank">Menu burger</a>
+                </li>
+                <li>
+                    <a className="colorLink" href='https://www.npmjs.com/package/ngx-infinite-scroll' target="_blank">infinite-scroll</a>
+                </li>
+                <li>
+                    <a className="colorLink" href='http://react.tips/checkboxes-in-react/' target="_blank">Checkboxes</a>
+                </li>
+            </ul>
         ) : null;
         return (
             <div className="bouton">
