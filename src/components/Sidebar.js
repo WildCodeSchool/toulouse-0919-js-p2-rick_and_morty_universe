@@ -1,10 +1,10 @@
 import React from 'react';
 import logo1 from '../imageaccueil/logo1.png';
-import './sidebar.css';
+import './Sidebar.css';
 import { slide as Menu } from 'react-burger-menu';
 import { Link } from 'react-router-dom';
 
-const SideBar = props => {
+const Sidebar = props => {
   return (
     <div className="sidebar">
       <Link to="/">
@@ -29,4 +29,4 @@ const SideBar = props => {
   );
 };
 
-export default SideBar;
+export default Sidebar;

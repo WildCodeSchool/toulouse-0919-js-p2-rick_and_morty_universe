@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import imagesources from '../ImageSource/imageSource.png';
 import titleimage from '../imageaccueil/titleimage.png';
 import './SourcePage.css';
-import CharactersListHeader from './CharactersListHeader';
 import BoutonUn from './BoutonUn.jsx';
 import BoutonDeux from './BoutonDeux.jsx';
 import BoutonTrois from './BoutonTrois.jsx';
@@ -16,7 +15,6 @@ class SourcePage extends Component {
     render() {
         return (
             <div className="block">
-                <CharactersListHeader />
                 <div className="image">
                     <img className="titleimage" src={titleimage} alt="titleimage" />
                     <img className="imagesources" src={imagesources} alt="sources" />

@@ -3,7 +3,6 @@ import axios from 'axios';
 import CharacteresInfos from './CharacteresInfos';
 import './CharacteresList.css';
 import InfiniteScroll from 'react-infinite-scroller';
-import CharactersListHeader from './CharactersListHeader';
 
 class CharacteresList extends React.Component {
   constructor(props) {
