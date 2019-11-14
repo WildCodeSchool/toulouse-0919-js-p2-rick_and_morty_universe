@@ -6,6 +6,8 @@ import BoutonUn from './BoutonUn.jsx';
 import BoutonDeux from './BoutonDeux.jsx';
 import BoutonTrois from './BoutonTrois.jsx';
 import BoutonQuatre from './BoutonQuatre.jsx';
+import SideBar from './Sidebar'
+import Footer from './Footer'
 
 class SourcePage extends Component {
     constructor(props) {
@@ -15,6 +17,12 @@ class SourcePage extends Component {
     render() {
         return (
             <div className="block"> 
+            <SideBar
+          page={"sources"}/>
+        <div className="titleSources">
+          Sources
+        </div>
+        <Footer/>
                 <div className="image">
                     <img className="titleimage" src={titleimage} alt="titleimage" />
                     <img className="imagesources" src={imagesources} alt="sources" />
