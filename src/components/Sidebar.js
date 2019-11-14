@@ -4,7 +4,6 @@ import './Sidebar.css';
 import { slide as Menu } from 'react-burger-menu';
 import { Link } from 'react-router-dom';
 
-
 class Sidebar extends Component {
   render() {
     return (

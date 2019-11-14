@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import CharacterPage from './components/CharacterPage';
 import CharacteresList from './components/CharacteresList';
+import SourcePage from './components/SourcePage';
 /* eslint-disable import/no-unresolved */
 import { Switch, Route } from 'react-router-dom';
 import AccueilPage from './components/AccueilPage';
@@ -33,6 +34,7 @@ function App() {
         </Route>
         <Route path="/page/:id" component={CharacterPage} />
         <Route path="/about" component={ContactPage} />
+        <Route path="/source" component={SourcePage} />
       </Switch>
     </div>
   );
