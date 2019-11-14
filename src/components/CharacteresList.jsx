@@ -241,7 +241,7 @@ class CharacteresList extends React.Component {
 
           <div class="dropdown">
             <button class="dropbtn">Status</button>
-            <div class="dropdown-content">
+            <div class="dropdown-content dd-right">
               <input ref={this.aliveRef} type="checkbox" name="alive" value="alive" onChange={this.handleAliveChange} />Alive<br />
               <input ref={this.deadRef} type="checkbox" name="dead" value="dead" onChange={this.handleDeadChange} />Dead<br />
             </div>

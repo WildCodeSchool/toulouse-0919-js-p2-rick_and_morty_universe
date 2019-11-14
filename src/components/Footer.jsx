@@ -20,17 +20,17 @@ function Footer() {
         <a href="https://codepen.io">
           <img className="icone" src={Codepen} alt="codepen" />
         </a>
-        <a href="https://www.netflix.com/">
+        <a href="https://www.netflix.com/title/80014749">
           <img className="icone" src={Netflix} alt="netflix" />
         </a>
         
-        <a href="https://www.youtube.com/">
+        <a href="https://www.youtube.com/user/adultswim">
           <img className="icone" src={Youtube} alt="youtube" />
         </a>
         <a href="https://github.com/">
           <img className="icone" src={Github} alt="github" />
         </a>
-        <a href="https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=lucie-bento-16737a178&trk=public_profile_nav-header-join">
+        <a href="https://www.linkedin.com/school/wild-codes-chool/">
           <img className="icone" src={Linkedin} alt="linkedin" />
         </a>
       </div>

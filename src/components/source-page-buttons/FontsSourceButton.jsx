@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './BoutonQuatre.css';
 
-class BoutonDeux extends Component {
+class FontsSourceButton extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -17,8 +16,8 @@ class BoutonDeux extends Component {
     }
 
     render() {
-        const link3 = this.state.show ? (
-            <ul>
+        const links = this.state.show ? (
+            <ul className="links">
                 <li>
                     <a className="colorLink" href='https://fonts.google.com/specimen/Freckle+Face' target="_blank">Freckle Face</a>
                 </li>
@@ -28,12 +27,12 @@ class BoutonDeux extends Component {
             </ul>
         ) : null;
         return (
-            <div className="bouton">
+            <div className="button">
                 <button className="infoSources" onClick={this.displayHandler}>Fonts</button>
-                {link3}
+                {links}
             </div>
         );
     }
 }
 
-export default BoutonDeux;
+export default FontsSourceButton;
