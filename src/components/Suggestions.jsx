@@ -6,7 +6,7 @@ const Suggestions = props => {
   const options = props.results.map(r => (
     <NavLink to={`page/${r.id}`}>
       <div className="suggestion" key={r.id}>
-        <img className="suggImg" src={r.image} />
+        <img alt="character preview" className="suggImg" src={r.image} />
         <p>{r.name}</p>
       </div>
     </NavLink>

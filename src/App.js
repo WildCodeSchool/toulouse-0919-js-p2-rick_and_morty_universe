@@ -9,26 +9,32 @@ import AccueilPage from './components/AccueilPage';
 import PersoAccueil from './components/PersoAccueil';
 import SideBar from './components/Sidebar';
 import Footer from './components/Footer';
+import ContactPage from './components/ContactPage';
 
 function App() {
   return (
     <div className="App">
       <Switch>
-          <Route exact path="/">
-        <div className="home">
-            <SideBar pageWrapId={'accueil'} outerContainerId={'root'} />
+        <Route exact path="/">
+          <div className="home">
+            <SideBar 
+            pageWrapId={'accueil'} 
+            outerContainerId={'root'} />
             <AccueilPage />
             <PersoAccueil />
-            <Footer />
-        </div>
-          </Route>
+          </div>
+          <Footer />
+        </Route>
         <Route path="/characters" >
+          <SideBar 
+          pageWrapId={'accueil'} 
+          outerContainerId={'root'} 
+          page={"characters"}/>
           <CharacteresList />
         </Route>
         <Route path="/page/:id" component={CharacterPage} />
-        <Route>
-          <SourcePage />
-        </Route>
+        <Route path="/about" component={ContactPage} />
+        <Route path="/source" component={SourcePage} />
       </Switch>
     </div>
   );

@@ -2,6 +2,7 @@ body {
   background-image: url(./imageaccueil/planetTest.png);
 
   background-attachment: fixed;
-  background-size: auto;
+  background-size: cover;
   height: 100%;
+  background-repeat: no-repeat;
 }

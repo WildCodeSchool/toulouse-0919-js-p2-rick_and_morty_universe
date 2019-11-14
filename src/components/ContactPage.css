@@ -1,0 +1,79 @@
+.contactContainer{
+    overflow: hidden;
+
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 75px;
+
+}
+
+.titleContact{
+    margin-top: 32px;
+    text-align: center;
+    color: white;
+    font-family: 'Freckle Face', cursive;
+    font-size: 40pt;
+}
+.carousel-container{
+    margin-top: 32px;
+    width: 500px;
+    height: 500px;
+    border-radius: 10%;
+    background: black;
+background-repeat: no-repeat;
+
+  background-size: contain;
+
+    background-image: url('../imageaccueil/bg_portal.png');
+}
+
+.slide{
+    background: transparent !important;
+}
+.carousel{
+    
+    border-radius: 10%;
+}
+
+#subtext{
+    margin-top: 16px;
+    color: white;
+    font-size: 16pt;
+}
+
+.legend{
+    bottom: 20px !important;
+    background: transparent !important;
+    font-size: 30px !important;
+    opacity: 1 !important;
+    font-family: 'Freckle Face', cursive;
+}
+
+@media screen and (max-width: 750px){
+    .carousel-container{
+        margin-top: 10%;
+        width: 50%;
+        height: auto;
+        border-radius: 5%;
+    }
+    
+
+    #subtext{
+        font-size: 12pt;
+    }
+
+    .control-dots{
+        display: none;
+    }
+
+    .legend{
+        padding: 0px !important;
+        bottom: -2px !important;
+        font-size: 14px !important;
+    }
+}
