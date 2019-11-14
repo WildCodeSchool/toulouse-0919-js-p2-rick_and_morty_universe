@@ -1,0 +1,71 @@
+.containerfooter {
+  position: absolute;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: black;
+  bottom: 0px;
+}
+.text-footer {
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: white;
+  font-family: 'Freckle Face';
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+.titlefooter {
+  margin-top: 3px;
+  color: #00beb3;
+  font-family: 'Freckle Face';
+  font-size: 16px;
+  line-height: 15px;
+  text-align: center;
+}
+.icone {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+@media screen and (min-width: 751px) {
+  .containerfooter {
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+  }
+  .icone {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .network {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .sectionfooter {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .text-footer {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .titlefooter {
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
