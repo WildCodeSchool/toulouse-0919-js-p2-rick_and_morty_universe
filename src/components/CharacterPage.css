@@ -1,11 +1,11 @@
 
 .BannerHeaderCharacterPage {
     /* background-color: black; */
-    background-image: url('./ImageBannière/bannière.png');
+    background-image: url('../imageaccueil/bg-banner.PNG');
     background-repeat:no-repeat;
     background-size:cover;
-    background-position:center;
-    height: 150px;
+    background-position:bottom;
+    height: 110px;
     width: 100%;
 }
 .image-character:hover {
@@ -15,6 +15,10 @@
     /* When the animation is finished, start again */
     animation-iteration-count: infinite;
   }
+
+  li{
+    font-size: 18pt;
+}
   
   @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -43,10 +47,13 @@ h1 {
     font-weight: bold;
     margin-bottom: 20px;
     border: solid;
-    border-radius: 30%;
-    padding: 16px;
+    border-radius: 20%;
+    padding: 32px;
     border-color: #5db55d;
-    /* text-align: center; */
+}
+
+.character-infos ul{
+    padding-left: 0px;
 }
 
 .allitems{
@@ -78,6 +85,36 @@ h1 {
 
 }
 
-.episode {
+.episode ul{
+    margin-bottom: 0px;
+}
 
+@media screen and (max-width: 750px){
+    .image-character{
+        width: 50%;
+    }
+
+    .image-character img{
+        width: 100%;
+    }
+
+    .BannerHeaderCharacterPage {
+        height: 80px;
+    }
+
+
+    li{
+        font-size: 12pt;
+    }
+    
+    .character-infos ul{
+        padding-left: 0px;
+    }
+    .character-infos{
+        border-radius: 20%;
+    }
+
+    .character-infos {
+        padding: 16px;
+    }
 }

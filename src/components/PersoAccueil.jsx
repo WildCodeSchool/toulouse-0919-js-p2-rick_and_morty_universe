@@ -1,6 +1,5 @@
 import React from 'react';
 import './PersoAccueil.css';
-import { Link } from 'react-router-dom';
 import bethimg from '../img-perso-accueil/beth1.jpg';
 import jerryimg from '../img-perso-accueil/jerry1.jpg';
 import mr_poopybuttholeimg from '../img-perso-accueil/mr_poopybutthole1.jpg';

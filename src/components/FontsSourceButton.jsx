@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DocumentationSourceButton extends Component {
+class FontsSourceButton extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,23 +19,20 @@ class DocumentationSourceButton extends Component {
         const links = this.state.show ? (
             <ul className="links">
                 <li>
-                    <a className="colorLink" href='https://codesandbox.io/s/nmy6x9wrj' target="_blank">Menu burger</a>
+                    <a className="colorLink" href='https://fonts.google.com/specimen/Freckle+Face'>Freckle Face</a>
                 </li>
                 <li>
-                    <a className="colorLink" href='https://www.npmjs.com/package/ngx-infinite-scroll' target="_blank">infinite-scroll</a>
-                </li>
-                <li>
-                    <a className="colorLink" href='http://react.tips/checkboxes-in-react/' target="_blank">Checkboxes</a>
+                    <a className="colorLink" href='https://fonts.google.com/specimen/Roboto'>Roboto</a>
                 </li>
             </ul>
         ) : null;
         return (
             <div className="button">
-                <button className="infoSources" onClick={this.displayHandler}>Codes</button>
+                <button className="infoSources" onClick={this.displayHandler}>Fonts</button>
                 {links}
             </div>
         );
     }
 }
 
-export default DocumentationSourceButton;
+export default FontsSourceButton;

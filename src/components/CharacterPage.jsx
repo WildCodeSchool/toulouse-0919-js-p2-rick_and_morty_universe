@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import CharacterPageHeader from './CharacterPageHeader';
 import './CharacterPage.css';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
 
 class CharacterPage extends Component {
     constructor(props) {
@@ -51,6 +52,7 @@ class CharacterPage extends Component {
             <div>
                 <div className="allitems">
                     <div className="BannerHeaderCharacterPage">
+                    <Sidebar/>
                     </div> 
                         <div className="image-character">
 
@@ -79,6 +81,7 @@ class CharacterPage extends Component {
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         )
         
