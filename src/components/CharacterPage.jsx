@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import CharacterPageHeader from './CharacterPageHeader';
 import './CharacterPage.css';
 
 class CharacterPage extends Component {
@@ -47,33 +48,40 @@ class CharacterPage extends Component {
 
     render() {
         return (
-            <div className="allitems">
-                <div>
-                    {this.state.character && <img src={this.state.character.image} alt={this.state.character.name} />}
-                </div>
-                <div className="infos">
-                    {this.state.character && <h1>{this.state.character.name}</h1>}
-                    <div>
-                        <ul>
-                            {this.state.character && <li>Status: {this.state.character.status}</li>}
-                            {this.state.character && <li>Species:{this.state.character.species}</li>}
-                            {this.state.character && <li>Gender: {this.state.character.gender}</li>}
-                        </ul>
-                    </div>
-                    <div className="location">
-                        <ul>
-                            {this.state.location && <li>Location: {this.state.character.location.name}</li>}
-                        </ul>
-                    </div>
-                    <div className="episode">
-                        <ul>Epiosodes:
-                            {this.state.episode && <li>{this.state.episode.episode}</li>}
-                            {this.state.name && <li>{this.state.episode.name}</li>}
-                        </ul>
+            <div>
+                <div className="allitems">
+                    <div className="BannerHeaderCharacterPage">
+                    </div> 
+                        <div className="image-character">
+
+                            {this.state.character && <img src={this.state.character.image} alt={this.state.character.name} />}
+                        </div>
+                        <div className="infos">
+                            {this.state.character && <h1>{this.state.character.name}</h1>}
+                            <div className="character-infos">
+                                <ul>
+                                    {this.state.character && <li>Status: {this.state.character.status}</li>}
+                                    {this.state.character && <li>Species: {this.state.character.species}</li>}
+                                    {this.state.character && <li>Gender: {this.state.character.gender}</li>}
+                                </ul>
+                            
+                            <div className="location">
+                                <ul>
+                                    {this.state.location && <li>Location: {this.state.character.location.name}</li>}
+                                </ul>
+                            </div>
+                            <div className="episode">
+                                <ul>Epiosodes:
+                                    {this.state.episode && <li>{this.state.episode.episode}</li>}
+                                    {this.state.name && <li>{this.state.episode.name}</li>}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         )
+        
     }
 };
 
