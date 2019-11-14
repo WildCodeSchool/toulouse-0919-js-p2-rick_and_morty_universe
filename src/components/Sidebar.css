@@ -1,8 +1,40 @@
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  position: fixed;
+  right: 36px;
+  top: 36px;
+}
+
+.textmenu {
+  font-family: 'Freckle Face', cursive;
+  color: rgb(45, 212, 51);
+  font-size: 2em;
+  padding-left: 1em;
+}
+
+.textmenu:hover {
+  color: rgb(15, 110, 18);
+}
+
+.textmenu:visited {
+  color: rgb(48, 233, 54);
+}
+
+.textmenu:link {
+  text-decoration: none;
+}
+
+
+
+
 .sidebar {
   margin: 8px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 80px;
 }
 
 .burger {
@@ -83,9 +115,23 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
+.menu-burger{
+  display: block;
+}
+.menu{
+  display: none;
+}
 
 
 @media screen and (min-width: 751px) {
+
+  .menu-burger{
+    display: none;
+  }
+  .menu{
+    display: flex;
+  }
+
   .sidebar {
     margin: 8px;
     display: flex;

@@ -3,8 +3,6 @@ import axios from 'axios';
 import CharacteresInfos from './CharacteresInfos';
 import './CharacteresList.css';
 import InfiniteScroll from 'react-infinite-scroller';
-import Scroll from 'react-infinite-scroll-component';
-import CharactersListHeader from './CharactersListHeader';
 
 class CharacteresList extends React.Component {
   constructor(props) {
@@ -38,6 +36,13 @@ class CharacteresList extends React.Component {
     this.handleCronenbergChange = this.handleCronenbergChange.bind(this);
     this.handlePoopybuttholeChange = this.handlePoopybuttholeChange.bind(this);
     this.getCharactersByPage = this.getCharactersByPage.bind(this);
+
+    this.femaleRef = React.createRef();
+    this.maleRef = React.createRef();
+
+    this.aliveRef = React.createRef();
+    this.deadRef = React.createRef();
+
   }
 
   componentDidMount() {
@@ -45,26 +50,38 @@ class CharacteresList extends React.Component {
   }
 
   handleAliveChange(event) {
+    var deadCheckbox = this.deadRef.current;
+    deadCheckbox.checked = false;
     this.setState({
-      filterAlive: !this.state.filterAlive
+      filterAlive: !this.state.filterAlive,
+      filterDead: false
     })
   }
 
   handleDeadChange(event) {
+    var aliveCheckbox = this.aliveRef.current;
+    aliveCheckbox.checked = false;
     this.setState({
-      filterDead: !this.state.filterDead
+      filterDead: !this.state.filterDead,
+      filterAlive: false
     })
   }
 
   handleMaleChange(event) {
+    var femaleCheckbox = this.femaleRef.current;
+    femaleCheckbox.checked = false;
     this.setState({
-      filterMale: !this.state.filterMale
+      filterMale: !this.state.filterMale,
+      filterFemale: false
     })
   }
 
   handleFemaleChange(event) {
+    var maleCheckbox = this.maleRef.current;
+    maleCheckbox.checked = false;
     this.setState({
-      filterFemale: !this.state.filterFemale
+      filterFemale: !this.state.filterFemale,
+      filterMale: false
     })
   }
 
@@ -204,8 +221,8 @@ class CharacteresList extends React.Component {
           <div class="dropdown">
             <button class="dropbtn">Gender</button>
             <div class="dropdown-content">
-              <input type="checkbox" name="female" value="female" onChange={this.handleFemaleChange} />Female<br />
-              <input type="checkbox" name="male" value="male" onChange={this.handleMaleChange} />Male<br />
+              <input ref={this.femaleRef} type="checkbox" name="female" value="female" onChange={this.handleFemaleChange} />Female<br />
+              <input ref={this.maleRef} type="checkbox" name="male" value="male" onChange={this.handleMaleChange} />Male<br />
             </div>
           </div>
           <div class="dropdown">
@@ -225,8 +242,8 @@ class CharacteresList extends React.Component {
           <div class="dropdown">
             <button class="dropbtn">Status</button>
             <div class="dropdown-content">
-              <input type="checkbox" name="alive" value="alive" onChange={this.handleAliveChange} />Alive<br />
-              <input type="checkbox" name="dead" value="dead" onChange={this.handleDeadChange} />Dead<br />
+              <input ref={this.aliveRef} type="checkbox" name="alive" value="alive" onChange={this.handleAliveChange} />Alive<br />
+              <input ref={this.deadRef} type="checkbox" name="dead" value="dead" onChange={this.handleDeadChange} />Dead<br />
             </div>
           </div>
         </div>

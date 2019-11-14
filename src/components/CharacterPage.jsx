@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './CharacterPage.css';
-import CharactersListHeader from './CharactersListHeader';
 
 class CharacterPage extends Component {
     constructor(props) {
@@ -48,7 +47,7 @@ class CharacterPage extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="allitems">
                 <div>
                     {this.state.character && <img src={this.state.character.image} alt={this.state.character.name} />}
                 </div>

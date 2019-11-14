@@ -3,10 +3,6 @@
   font-family: 'Freckle Face', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: rgb(133,191,196);
-  background: linear-gradient(333deg, rgba(133,191,196,1) 0%, rgba(128,218,12,1) 46%, rgba(255,255,255,1) 100%); */
-  background: rgb(133,191,196);
-  background: radial-gradient(circle, rgba(133,191,196,1) 0%, rgba(128,218,12,1) 46%, rgba(255,255,255,1) 100%);
 }
 
 code {
