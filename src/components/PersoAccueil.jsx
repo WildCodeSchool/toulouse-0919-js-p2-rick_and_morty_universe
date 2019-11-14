@@ -15,6 +15,7 @@ import summerimg from '../img-perso-accueil/summer1.jpg';
 
 import portalimg from '../imageaccueil/portalimg.png';
 
+
 function PersoAccueil() {
   return (
     <div className="" id="perso">

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import CharacterPageHeader from './CharacterPageHeader';
 import './CharacterPage.css';
 
 class CharacterPage extends Component {
@@ -47,7 +48,12 @@ class CharacterPage extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div>
+            <div className="allitems">
+               
+       <div className="BannerHeaderCharacterPage">
+       </div> 
+    
                 <div>
                     {this.state.character && <img src={this.state.character.image} alt={this.state.character.name} />}
                 </div>
@@ -73,7 +79,9 @@ class CharacterPage extends Component {
                     </div>
                 </div>
             </div>
+        </div>
         )
+        
     }
 };
 
