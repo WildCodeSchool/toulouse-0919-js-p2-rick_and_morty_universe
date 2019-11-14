@@ -54,18 +54,18 @@ class CharacterPage extends Component {
        <div className="BannerHeaderCharacterPage">
        </div> 
     
-                <div>
+                <div className="image-character">
                     {this.state.character && <img src={this.state.character.image} alt={this.state.character.name} />}
                 </div>
                 <div className="infos">
                     {this.state.character && <h1>{this.state.character.name}</h1>}
-                    <div>
+                    <div className="character-infos">
                         <ul>
                             {this.state.character && <li>Status: {this.state.character.status}</li>}
                             {this.state.character && <li>Species:{this.state.character.species}</li>}
                             {this.state.character && <li>Gender: {this.state.character.gender}</li>}
                         </ul>
-                    </div>
+                    
                     <div className="location">
                         <ul>
                             {this.state.location && <li>Location: {this.state.character.location.name}</li>}
@@ -80,6 +80,7 @@ class CharacterPage extends Component {
                 </div>
             </div>
         </div>
+    </div>
         )
         
     }
