@@ -20,7 +20,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <div className="home">
-            <SideBar 
+            <Sidebar 
             pageWrapId={'accueil'} 
             outerContainerId={'root'} />
             <AccueilPage />
@@ -29,7 +29,7 @@ function App() {
           <Footer />
         </Route>
         <Route path="/characters" >
-          <SideBar 
+          <Sidebar 
           pageWrapId={'accueil'} 
           outerContainerId={'root'} 
           page={"characters"}/>
