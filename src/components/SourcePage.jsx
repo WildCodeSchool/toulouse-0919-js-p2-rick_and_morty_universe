@@ -14,7 +14,7 @@ class SourcePage extends Component {
 
     render() {
         return (
-            <div className="block">
+            <div className="block"> 
                 <div className="image">
                     <img className="titleimage" src={titleimage} alt="titleimage" />
                     <img className="imagesources" src={imagesources} alt="sources" />
