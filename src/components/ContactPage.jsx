@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ContactPage.css';
 import './Carousel';
 import Carousel from './Carousel';
-import SideBar from './sidebar'
+import SideBar from './Sidebar'
 import Footer from './Footer'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 

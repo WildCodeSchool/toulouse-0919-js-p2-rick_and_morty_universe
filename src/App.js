@@ -6,7 +6,7 @@ import CharacteresList from './components/CharacteresList';
 import { Switch, Route } from 'react-router-dom';
 import AccueilPage from './components/AccueilPage';
 import PersoAccueil from './components/PersoAccueil';
-import SideBar from './components/sidebar';
+import SideBar from './components/Sidebar';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
 

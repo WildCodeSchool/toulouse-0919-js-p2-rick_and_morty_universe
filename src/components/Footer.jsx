@@ -30,7 +30,7 @@ function Footer() {
         <a href="https://github.com/">
           <img className="icone" src={Github} alt="github" />
         </a>
-        <a href="">
+        <a href="https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=lucie-bento-16737a178&trk=public_profile_nav-header-join">
           <img className="icone" src={Linkedin} alt="linkedin" />
         </a>
       </div>

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import logo1 from '../imageaccueil/logo1.png';
-import './sidebar.css';
+import './Sidebar.css';
 import { slide as Menu } from 'react-burger-menu';
 import { Link } from 'react-router-dom';
-class SideBar extends Component {
+class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar">
@@ -62,4 +62,4 @@ class SideBar extends Component {
   }
 };
 
-export default SideBar;
+export default Sidebar;
