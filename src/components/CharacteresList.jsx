@@ -4,6 +4,7 @@ import CharacteresInfos from './CharacteresInfos';
 import './CharacteresList.css';
 import InfiniteScroll from 'react-infinite-scroller';
 
+
 class CharacteresList extends React.Component {
   constructor(props) {
     super(props);

@@ -1,4 +1,13 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  clear: both;
   background-image: url(./imageaccueil/planetTest.png);
 
   background-attachment: fixed;
