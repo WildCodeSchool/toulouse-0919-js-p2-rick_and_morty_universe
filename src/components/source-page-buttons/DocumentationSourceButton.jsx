@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './BoutonTrois.css';
 
-class BoutonTrois extends Component {
+class DocumentationSourceButton extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -17,8 +16,8 @@ class BoutonTrois extends Component {
     }
 
     render() {
-        const link2 = this.state.show ? (
-            <ul>
+        const links = this.state.show ? (
+            <ul className="links">
                 <li>
                     <a className="colorLink" href='https://codesandbox.io/s/nmy6x9wrj' target="_blank">Menu burger</a>
                 </li>
@@ -31,12 +30,12 @@ class BoutonTrois extends Component {
             </ul>
         ) : null;
         return (
-            <div className="bouton">
+            <div className="button">
                 <button className="infoSources" onClick={this.displayHandler}>Codes</button>
-                {link2}
+                {links}
             </div>
         );
     }
 }
 
-export default BoutonTrois;
+export default DocumentationSourceButton;

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import imagesources from '../ImageSource/imageSource.png';
-import titleimage from '../imageaccueil/titleimage.png';
+
+import titleimg2 from '../imageaccueil/titleimg2.png';
 import './SourcePage.css';
-import BoutonUn from './BoutonUn.jsx';
-import BoutonDeux from './BoutonDeux.jsx';
-import BoutonTrois from './BoutonTrois.jsx';
-import BoutonQuatre from './BoutonQuatre.jsx';
+import DocumentSourceButton from './source-page-buttons/DocumentSourceButton.jsx';
+import DocumentationSourceButton from './source-page-buttons/DocumentationSourceButton.jsx';
+import FontsSourceButton from './source-page-buttons/FontsSourceButton.jsx';
+import SideBar from './Sidebar'
+import Footer from './Footer'
 
 class SourcePage extends Component {
     constructor(props) {
@@ -15,20 +16,32 @@ class SourcePage extends Component {
     render() {
         return (
             <div className="block"> 
+                <SideBar
+                page={"sources"}/>
                 <div className="image">
-                    <img className="titleimage" src={titleimage} alt="titleimage" />
-                    <img className="imagesources" src={imagesources} alt="sources" />
-                </div>
-                <div className = "Bouton">
-                    <div className = "Bouton1">
-                        <BoutonUn />
-                        <BoutonDeux />
+                        <img className="titleimage" src={titleimg2} alt="titleimage" />
                     </div>
-                    <div className = "Bouton2">
-                        <BoutonTrois />
-                        <BoutonQuatre />
+                <div className="titleSources">
+                    Sources
+                </div>
+                <div className="button-links">
+                    <div className = "column-button">
+                        <div className="button">
+                            <a className="infoSources" href='https://rickandmortyapi.com/' target="_blank">API</a>
+                        </div>
+                        <div className="button">
+                            <a className="infoSources" href='https://www.deviantart.com/search?q=rick%20and%20morty' target="_blank">Images sources</a>
+                        </div>
+
+                    </div>
+                    <div className = "column-button">
+                        <div className="button">
+                            <a className="infoSources" href='https://fr.reactjs.org/docs/getting-started.html' target="_blank">React doc</a>
+                        </div>
+                        <FontsSourceButton />
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
     }

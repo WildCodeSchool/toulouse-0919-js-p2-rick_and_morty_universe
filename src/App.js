@@ -34,7 +34,7 @@ function App() {
         </Route>
         <Route path="/page/:id" component={CharacterPage} />
         <Route path="/about" component={ContactPage} />
-        <Route path="/source" component={SourcePage} />
+        <Route path="/sources" component={SourcePage} />
       </Switch>
     </div>
   );
