@@ -11,10 +11,10 @@ class ContactPage extends Component {
     super(props);
     
     this.textToShow=[
-      "Je m'appelle Lucie j'aime la dinde", /*Phrase de Lucie*/
+      "''I love watching bukakke, I mean, like, I don’t know if I personally would ever do it…''", /*Phrase de Lucie*/
       "We just met Morty, and guess what he told us : ask to Damien!",  /*Phrase de Aina*/
-      "Weddings are basically funerals with cake.",  /*Phrase de Ismael*/
-      "Nobody exists on purpose. Nobody belongs anywhere. We're all going to die. Come watch TV."]; /*Phrase de Damien*/
+      "''Weddings are basically funerals with cake.''",  /*Phrase de Ismael*/
+      "''Nobody exists on purpose. Nobody belongs anywhere. We're all going to die. Come watch TV.''"]; /*Phrase de Damien*/
 
       this.githubUsernames=[
         "https://github.com/lu-cy-alt", /*Phrase de Lucie*/

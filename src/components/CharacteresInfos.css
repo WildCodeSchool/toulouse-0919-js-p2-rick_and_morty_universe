@@ -47,7 +47,10 @@
 
 .characteresname {
     width: 100%;
-    color: #3e8e41;
+    color: #4CAF50;
+    text-align: center;
+    font-family: 'Freckle Face';
+
 }
 
 @media screen and (min-width: 720px) {
