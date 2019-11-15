@@ -1,4 +1,4 @@
-.container {
+.allitems {
     display: flex;
     padding: 0;
     flex-direction: column;
@@ -7,7 +7,7 @@
     color: aliceblue;
 }
 
-.container li {
+.allitems li {
     list-style-type: none;
 }
 

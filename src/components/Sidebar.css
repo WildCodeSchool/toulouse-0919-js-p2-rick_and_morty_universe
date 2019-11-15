@@ -1,0 +1,140 @@
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  position: fixed;
+  right: 36px;
+  top: 36px;
+}
+
+.textmenu {
+  font-family: 'Freckle Face', cursive;
+  color: rgb(45, 212, 51);
+  font-size: 2em;
+  padding-left: 1em;
+}
+
+.textmenu:hover {
+  color: rgb(15, 110, 18);
+}
+
+.textmenu:visited {
+  color: rgb(48, 233, 54);
+}
+
+.textmenu:link {
+  text-decoration: none;
+}
+.sidebar {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.burger {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-img {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+/* Individual item */
+.bm-item {
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: white;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 25px;
+  height: 20px;
+  right: 25px;
+  top: 25px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #fff;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background:#00beb3;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: white;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Menu width style */
+.bm-menu-wrap{
+  width: 150px !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: violet;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: violet;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+  .menu-burger{
+    display: block;
+  }
+  .menu{
+    display: none;
+  }
+
+
+
+@media screen and (min-width: 751px) {
+  .sidebar {
+    height: 90px;
+  }
+
+  .logo-img{
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu-burger{
+    display: none;
+  }
+  .menu{
+    display: flex;
+  }
+}

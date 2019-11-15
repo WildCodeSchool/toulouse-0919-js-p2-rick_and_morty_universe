@@ -1,0 +1,123 @@
+
+.titleSources{
+    margin-bottom: 32px;
+    text-align: center;
+    color: white;
+    font-size: 40pt;
+    font-family : 'Freckle Face';
+}
+
+.image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titleimage{
+    margin-left: auto;
+    margin-right: auto;
+    width : 70%;
+    margin-bottom : 20px; 
+    margin-top : 20px;
+}
+
+.button{
+    margin : 30px;
+}
+
+.button-links{
+    display: flex;
+    flex-direction : row;
+    justify-content:center;
+    align-items : flex-end; 
+}
+
+.column-button{
+    display: flex;
+    flex-direction : column;
+    align-items: center;
+    
+} 
+
+.links{
+    margin-top: 4px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    z-index: 3;
+    position: absolute;
+    width: 300px;
+}
+
+.infoSources{
+    display: flex;
+    flex-direction : row;
+    justify-content:center;
+    align-items : flex-end; 
+    font-family : 'Freckle Face';
+    font-size : 32px;
+    border-radius: 8px;
+    color : white;
+    width: 350px;
+    background:rgb(12, 143, 16);
+    border : 0px solid black;
+}
+
+.infoSources:hover{
+    background: rgb(16, 114, 20);
+    color: white;
+}
+
+.colorLink:hover {
+    color: white;
+}
+
+.colorLink{
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14pt;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-right: 8px;
+}
+
+@media screen and (max-width: 751px){
+
+    .titleSources{
+        font-size: 24pt;
+    }
+
+    .titleimage{
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 8px;
+    }
+
+    .infoSources{
+        width: 250px;
+        margin: 10px;
+        font-size : 25px;
+    }
+
+    .colorLink{
+        font-size: 12pt;
+    }
+
+    .links{
+        width: 220px;
+        margin-left: 10px;
+    }
+
+    .button-links{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button{
+        margin: 10px;
+    }
+
+}
