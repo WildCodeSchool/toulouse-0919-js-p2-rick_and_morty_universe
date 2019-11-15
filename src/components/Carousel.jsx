@@ -13,7 +13,7 @@ function CarouselPhoto({ onChangeCarousel }) {
       autoPlay
       infiniteLoop
       onChange={(index) => onChangeCarousel(index)}
-      interval={3000}
+      interval={1500}
       showStatus={false}
       showThumbs={false}>
       <div>

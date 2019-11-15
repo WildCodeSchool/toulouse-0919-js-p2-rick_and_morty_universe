@@ -31,8 +31,11 @@ class SourcePage extends Component {
                     <div className = "column-button">
                         <div className="button">
                             <a className="infoSources" href='https://fr.reactjs.org/docs/getting-started.html'>React doc</a>
+                    </div>
+                        <div className="button">
+                            <a className="infoSources" href='https://rickandmorty.fandom.com/wiki/Rickipedia'>Fandom</a>
                         </div>
-                        <FontsSourceButton />
+                        
                     </div>
                 </div>
                 <Footer/>
