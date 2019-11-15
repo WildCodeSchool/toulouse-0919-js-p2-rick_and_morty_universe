@@ -12,7 +12,7 @@ import scquanchyimg from '../img-perso-accueil/scquanchy1.jpg';
 import snowballimg from '../img-perso-accueil/snowball1.jpg';
 import summerimg from '../img-perso-accueil/summer1.jpg';
 import portalimg from '../imageaccueil/portalimg.png';
-import { Link } from 'react-router-dom';
+
 
 function PersoAccueil() {
   return (
@@ -20,55 +20,164 @@ function PersoAccueil() {
       <div className="portal">
         <img src={portalimg} alt="portal logo" className="portal-img" />
       </div>
-      <Link to="/">
-        <div className="beth perso-accueil">
-          <img src={bethimg} alt="beth logo" className="beth-img" />
-        </div>
 
-        <div className="jerry perso-accueil">
-          <img src={jerryimg} alt="jerry logo" className="jerry-img" />
+      <div className="beth perso-accueil">
+        <div className="zoom">
+          <div className="rotating-beth">
+            <a
+              href="https://rickandmorty.fandom.com/wiki/Beth_Smith"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={bethimg} alt="beth logo" className="beth-img" />
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div className="mr_poopybutthole perso-accueil">
-          <img
-            src={mr_poopybuttholeimg}
-            alt="mr_poopybutthole logo"
-            className="mr_poopybutthole-img"
-          />
+      <div className="jerry perso-accueil">
+        <div className="zoom">
+          <div className="rotating-jerry">
+            <a
+              href="https://rickandmorty.fandom.com/wiki/Jerry_Smith"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={jerryimg} alt="jerry logo" className="jerry-img" />
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div className="meeseeks perso-accueil">
-          <img src={meeseeksimg} alt="meeseeks logo" className="meeseeks-img" />
+      <div className="mr_poopybutthole perso-accueil">
+        <div className="zoom">
+          <div className="rotating-poopy">
+            <a
+              href="https://rickandmorty.fandom.com/wiki/Mr._Poopybutthole"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={mr_poopybuttholeimg}
+                alt="mr_poopybutthole logo"
+                className="mr_poopybutthole-img"
+              />
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div className="morty perso-accueil">
-          <img src={mortyimg} alt="morty logo" className="morty-img" />
+      <div className="meeseeks perso-accueil">
+        <div className="zoom">
+          <div className="rotating-meeseeks">
+            <a
+              href="https://rickandmorty.fandom.com/wiki/Mr._Meeseeks"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={meeseeksimg} alt="meeseeks logo" className="meeseeks-img" />
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div className="pickle_rick perso-accueil">
-          <img src={pickle_rickimg} alt="pickle_rick logo" className="pickle_rick-img" />
+      <div className="morty perso-accueil">
+        <div className="zoom-main-characters">
+          <div className="rotating-morty">
+            <a
+              href="https://rickandmorty.fandom.com/wiki/Morty_Smith"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={mortyimg} alt="morty logo" className="morty-img" />
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div className="rick perso-accueil">
-          <img src={rickimg} alt="rick logo" className="rick-img" />
+      <div className="pickle_rick perso-accueil">
+        <div className="zoom">
+          <div className="rotating-pickle">
+            <a
+              href="https://rickandmorty.fandom.com/wiki/Pickle_Rick_(Character)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={pickle_rickimg} alt="pickle_rick logo" className="pickle_rick-img" />
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div className="scary_terry perso-accueil">
-          <img src={scary_terryimg} alt="scary_terry logo" className="scary_terry-img" />
+      <div className="rick perso-accueil">
+        <div className="zoom-main-characters">
+          <div className="rotating-rick">
+            <a
+              href="https://rickandmorty.fandom.com/wiki/Rick_Sanchez"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={rickimg} alt="rick logo" className="rick-img" />
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div className="scquanchy perso-accueil">
-          <img src={scquanchyimg} alt="scquanchy logo" className="scquanchy-img" />
+      <div className="scary_terry perso-accueil">
+        <div className="zoom">
+          <div className="rotating-terry">
+            <a
+              href="https://rickandmorty.fandom.com/wiki/Scary_Terry"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={scary_terryimg} alt="scary_terry logo" className="scary_terry-img" />
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div className="snowball perso-accueil">
-          <img src={snowballimg} alt="snowball logo" className="snowball-img" />
+      <div className="scquanchy perso-accueil">
+        <div className="zoom">
+          <div className="rotating-scquanchy">
+            <a
+              href="https://rickandmorty.fandom.com/wiki/Squanchy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={scquanchyimg} alt="scquanchy logo" className="scquanchy-img" />
+            </a>
+          </div>
         </div>
+      </div>
 
-        <div className="summer perso-accueil">
-          <img src={summerimg} alt="summer logo" className="summer-img" />
+      <div className="snowball perso-accueil">
+        <div className="zoom">
+          <div className="rotating-snowball">
+            <a
+              href="https://rickandmorty.fandom.com/wiki/Snuffles"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={snowballimg} alt="snowball logo" className="snowball-img" />
+            </a>
+          </div>
         </div>
-      </Link>
+      </div>
+
+      <div className="summer perso-accueil">
+        <div className="zoom">
+          <div className="rotating-summer">
+            <a
+              href="https://rickandmorty.fandom.com/wiki/Summer_Smith"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={summerimg} alt="summer logo" className="summer-img" />
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
