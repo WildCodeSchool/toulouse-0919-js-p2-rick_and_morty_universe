@@ -12,16 +12,27 @@ class ContactPage extends Component {
     
     this.textToShow=[
       "Je m'appelle Lucie j'aime la dinde", /*Phrase de Lucie*/
-      "Je m'appelle Aina j'aime le pain",  /*Phrase de Aina*/
-      "Je m'appelle Ismael j'aime la dinde",  /*Phrase de Ismael*/
-      "Je m'appelle Damien j'aime le pain"]; /*Phrase de Damien*/
+      "We just met Morty, and guess what he told us : ask to Damien!",  /*Phrase de Aina*/
+      "Weddings are basically funerals with cake.",  /*Phrase de Ismael*/
+      "Nobody exists on purpose. Nobody belongs anywhere. We're all going to die. Come watch TV."]; /*Phrase de Damien*/
+
+      this.githubUsernames=[
+        "https://github.com/lu-cy-alt", /*Phrase de Lucie*/
+        "https://github.com/eine3131",  /*Phrase de Aina*/
+        "https://github.com/Strahk",  /*Phrase de Ismael*/
+        "https://github.com/NeimaDSky"]; /*Phrase de Damien*/
     this.indexToShow = 0;
-    this.myRef = React.createRef();
+    this.subtextRef = React.createRef();
+    this.linkRef = React.createRef();
   }
   carouselDidChange = (index) => {
     this.indexToShow = index;
-    var lediv = this.myRef.current;
-    lediv.innerHTML = this.textToShow[this.indexToShow];
+
+    var subtext = this.subtextRef.current;
+    subtext.innerHTML = this.textToShow[this.indexToShow];
+
+    var githublink = this.linkRef.current;
+    githublink.href = this.githubUsernames[this.indexToShow];
   }
   
   render(){
@@ -35,7 +46,8 @@ class ContactPage extends Component {
         <div className="contact">
           <Carousel
             onChangeCarousel={this.carouselDidChange}/>
-            <p ref={this.myRef} id="subtext">{this.textToShow[0]}</p>
+            <p ref={this.subtextRef} id="subtext">{this.textToShow[0]}</p>
+            <a ref={this.linkRef} href={this.githubUsernames[0]} id="linkGithub" target="_blank">Mon Github</a>
         </div>
         <Footer/>
       </div>

@@ -73,7 +73,7 @@ class CharacterPage extends Component {
                                 </ul>
                             </div>
                             <div className="episode">
-                                <ul>Epiosodes:
+                                <ul>Episodes:
                                     {this.state.episode && <li>{this.state.episode.episode}</li>}
                                     {this.state.name && <li>{this.state.episode.name}</li>}
                                 </ul>
